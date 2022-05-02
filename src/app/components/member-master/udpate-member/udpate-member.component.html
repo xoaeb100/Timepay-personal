@@ -1,0 +1,992 @@
+<!-- breadcrumb -->
+<div class="breadcrumb-header justify-content-between">
+	<!-- <div class="my-auto">
+		<div class="d-flex">
+			<h4 class="content-title mb-0 my-auto">Dashboard</h4>
+            <span class="text-muted mt-1 tx-13 ml-2 mb-0">/ Member Master</span>
+		</div>
+	</div>
+    <div class="d-flex my-xl-auto right-content mr-2">
+		<div class="pr-1 mb-3 mb-xl-0">
+			<button type="button" class="btn btn-info btn-icon mr-2"><i class="mdi mdi-filter-variant"></i></button>
+		</div>
+	</div> -->
+</div>
+<div class="row">
+	<div class="col-xl-12">
+		<!-- div -->
+		<div class="card mg-b-20" id="tabs-style2">
+			<div class="card-body">
+				<!-- <div class="main-content-label mg-b-5">
+					Member Master
+				</div>
+				<p class="mg-b-20">Lorem Ipsum is simply dummy text of the printing and typesetting industry.				</p> -->
+				<div class="text-wrap">
+					<div class="example">
+						<div class="panel panel-primary tabs-style-2">
+							<div class=" tab-menu-heading">
+								<ul ngbNav #nav1="ngbNav"  class="panel-tabs main-nav-line">
+									<li [ngbNavItem]="1">
+									  <a ngbNavLink>Member Info</a>
+									  <ng-template ngbNavContent>
+                                        <br>
+										<div class="row">
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <select class="form-control">
+                                                        <option value="">Select Property Type</option>
+                                                        <option value="Office">Office</option>
+                                                        <option value="Shop">Shop</option>
+                                                        <option value="Flat">Flat</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <h6 class="card-title mb-1">Owner Details</h6>
+                                            <br><br>
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-3" style="text-align: -webkit-center;">
+                                                        <div class="form-group">
+                                                            <div class="main-img-user avatar-xxl d-none d-sm-block">
+                                                                <img alt="avatar" class="rounded-circle" src="./assets/img/faces/8.jpg">
+                                                            </div>
+                                                            <br>
+                                                            <input type="file" class="form-control"/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <div class="row">
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <select class="form-control">
+                                                                        <option value="">Select Title</option>
+                                                                        <option value="Mr.">Mr.</option>
+                                                                        <option value="Miss.">Miss.</option>
+                                                                        <option value="Mrs.">Mrs.</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input placeholder="Last Name" autocomplete="none" type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input placeholder="First Name" autocomplete="none" type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input placeholder="Middle Name" autocomplete="none" type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input placeholder="Mobile No" autocomplete="none" type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input placeholder="Landline No." autocomplete="none" type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input placeholder="Email ID" autocomplete="none" type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <select class="form-control">
+                                                                        <option value="">Select Gender</option>
+                                                                        <option value="Male">Male</option>
+                                                                        <option value="Female">Female</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input placeholder="Blood Group" autocomplete="none" type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input class="form-control" placeholder="DOB (YYYY-MM-DD)" name="dp"  ngbDatepicker (click)="d.toggle()" #d="ngbDatepicker">
+                                                                    <!-- <input placeholder="DOB (DD-MM-YYYY)" autocomplete="none" type="text" class="form-control"> -->
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input class="form-control" placeholder="Date of Anniversary (YYYY-MM-DD)" name="dp1"  ngbDatepicker (click)="dn.toggle()" #dn="ngbDatepicker">
+                                                                    <!-- <input placeholder="Date of Anniversary (DD-MM-YYYY)" autocomplete="none" type="text" class="form-control"> -->
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input class="form-control" placeholder="PAN No">
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input class="form-control" placeholder="GST No">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input type="file" class="form-control"/>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input type="file" class="form-control"/>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input type="file" class="form-control"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <h6 class="card-title mb-1">Family Profile</h6>
+                                            <br><br>
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-3" style="text-align: -webkit-center;">
+                                                        <div class="form-group">
+                                                            <div class="main-img-user avatar-xxl d-none d-sm-block">
+                                                                <img alt="avatar" class="rounded-circle" src="./assets/img/faces/8.jpg">
+                                                            </div>
+                                                            <br>
+                                                            <input type="file" class="form-control"/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <div class="row">
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <select class="form-control">
+                                                                        <option value="">Select Title</option>
+                                                                        <option value="Mr.">Mr.</option>
+                                                                        <option value="Miss.">Miss.</option>
+                                                                        <option value="Mrs.">Mrs.</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input placeholder="Full Name" autocomplete="none" type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input placeholder="Relation (with the owner)" autocomplete="none" type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input placeholder="Mobile No" autocomplete="none" type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input placeholder="Email ID" autocomplete="none" type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input placeholder="DOB (DD-MM-YYYY)" autocomplete="none" type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input placeholder="Age" autocomplete="none" type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <select class="form-control">
+                                                                        <option value="">Select Gender</option>
+                                                                        <option value="Male">Male</option>
+                                                                        <option value="Female">Female</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <select class="form-control">
+                                                                        <option value="">Select Occupation</option>
+                                                                        <option value="Service">Service</option>
+                                                                        <option value="Business">Business</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input placeholder="Blood Group" autocomplete="none" type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <select class="form-control">
+                                                                        <option value="">Proof of Identity</option>
+                                                                        <option value="Aadhar Card">Aadhar Card</option>
+                                                                        <option value="Pan Card">Pan Card</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input type="file" class="form-control"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+									  </ng-template>
+									</li>
+									<li [ngbNavItem]="2">
+									  <a ngbNavLink>Property Details</a>
+									  <ng-template ngbNavContent>
+										<div class="row">
+                                            <h6 class="card-title mb-1">Property Details</h6>
+                                            <br><br>
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="row">
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input class="form-control" autocomplete="none" placeholder="Date of Handover" name="dp"  ngbDatepicker (click)="d.toggle()" #d="ngbDatepicker">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input class="form-control" autocomplete="none" placeholder="Date of Moving In" name="dp"  ngbDatepicker (click)="dn.toggle()" #dn="ngbDatepicker">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input class="form-control" autocomplete="none" placeholder="Flat no">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input class="form-control" autocomplete="none" placeholder="Wing / Zone ">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <select class="form-control">
+                                                                        <option value="">Area Unit Type</option>
+                                                                        <option value="Square Feet">Square Feet (Sq.Ft)</option>
+                                                                        <option value="Square Meter">Square Meter (Sq.Mt.)</option>
+                                                                        <option value="Square Yard">Square Yard (Sq.Yard)</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <select class="form-control">
+                                                                        <option value="">Area Type</option>
+                                                                        <option value="Carpet">Carpet</option>
+                                                                        <option value="Built up">Built up</option>
+                                                                        <option value="Super Built up">Super Built up</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input class="form-control" autocomplete="none" placeholder="No. of Rooms">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input class="form-control" autocomplete="none" placeholder="Intercomm No.">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-12 col-md-12 mg-t-10 mg-sm-t-0">
+                                                                <label>Upload Property Documents (Agreement / Parking Allotment Letter / Possesion Letter / etc )</label>
+                                                                <div class="dropzone dropzone-primary" [dropzone]="config2">
+                                                                    <div class="dz-message needsclick">
+                                                                        <i class="fe fe-upload-cloud" aria-hidden="true"></i>
+                                                                        <h6>Drop Multiple files here or click to upload multiple files.</h6>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+									  </ng-template>
+									</li>
+                                    <li [ngbNavItem]="3">
+                                        <a ngbNavLink>Bank Details</a>
+                                        <ng-template ngbNavContent>
+                                          <div class="row">
+                                              <h6 class="card-title mb-1">Bank Details (Shared by Member)</h6>
+                                              <br><br>
+                                              <div class="col-md-12">
+                                                  <div class="row">
+                                                      <div class="col-md-12">
+                                                          <div class="row">
+                                                              <div class="col-md-3">
+                                                                  <div class="form-group">
+                                                                      <select class="form-control">
+                                                                          <option value="">Select Bank Lien</option>
+                                                                          <option value="Yes">Yes</option>
+                                                                          <option value="No">No</option>
+                                                                      </select>
+                                                                  </div>
+                                                              </div>
+                                                              <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input type="text" class="form-control" placeholder="Bank Name"/>
+                                                                </div>
+                                                              </div>
+                                                              <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input type="text" class="form-control" placeholder="Lien Letter Dated"
+                                                                     name="dpn"  ngbDatepicker (click)="dpn.toggle()" #dpn="ngbDatepicker"/>
+                                                                </div>
+                                                              </div>
+                                                              <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input type="text" class="form-control" placeholder="Amount (in Rs.)"/>
+                                                                </div>
+                                                              </div>
+                                                              <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input type="text" class="form-control" placeholder="Bank Lien Cancellation Letter Date"
+                                                                    name="blcld"  ngbDatepicker (click)="blcld.toggle()" #blcld="ngbDatepicker"/>
+                                                                </div>
+                                                              </div>
+                                                              <div class="col-sm-12 col-md-12 mg-t-10 mg-sm-t-0">
+                                                                <label>Upload Bank Documents (Lien Letter / Bank Lien Cancellation Letter / etc )</label>
+                                                                <div class="dropzone dropzone-primary" [dropzone]="config2">
+                                                                    <div class="dz-message needsclick">
+                                                                        <i class="fe fe-upload-cloud" aria-hidden="true"></i>
+                                                                        <h6>Drop Multiple files here or click to upload multiple files.</h6>
+                                                                    </div>
+                                                                </div>
+                                                              </div>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                        </ng-template>
+                                    </li>
+									<li [ngbNavItem]="4">
+									  <a ngbNavLink>Vehicle Details</a>
+									  <ng-template ngbNavContent>
+										<div class="row">
+                                            <div class="d-flex justify-content-between">
+                                                <h6 class="card-title mb-1">Vehicle 1</h6>
+                                                <li style="margin-top: 1px;" class="icons-list-item"><i class="fa fa-plus-circle"></i></li>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <div class="form-group">
+                                                            <select class="form-control">
+                                                                <option value="">Select Vehicle Type</option>
+                                                                <option value="Two Wheeler">Two Wheeler</option>
+                                                                <option value="Four Wheeler">Four Wheeler</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" placeholder="Vehicle Make">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" placeholder="Vehicle Model">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" placeholder="Vehicle Registration No.">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" placeholder="Vehicle Parking Slot">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" placeholder="Vehicle Owner Name">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-12 col-md-12 mg-t-10 mg-sm-t-0">
+                                                        <label>Upload Documents (Parking Allotment Letter / etc )</label>
+                                                        <div class="dropzone dropzone-primary" [dropzone]="config2">
+                                                            <div class="dz-message needsclick">
+                                                                <i class="fe fe-upload-cloud" aria-hidden="true"></i>
+                                                                <h6>Drop Multiple files here or click to upload multiple files.</h6>
+                                                            </div>
+                                                        </div>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                        </div>
+									  </ng-template>
+									</li>
+                                    <li [ngbNavItem]="5">
+                                        <a ngbNavLink>Billing Details</a>
+                                        <ng-template ngbNavContent>
+                                            <div class="row">
+                                                <div class="d-flex justify-content-between">
+                                                    <h6 class="card-title mb-1" style="padding-bottom: 10px;">Billing Details</h6>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control" placeholder="Principle Amount">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control" placeholder="Interest Amount">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control" placeholder="Waive off Principle">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control" placeholder="Waive off Interest">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <div class="form-group">
+                                                                <input type="text" class="form-control" placeholder="Vehicle Owner Name">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </ng-template>
+                                    </li>
+									<li [ngbNavItem]="6">
+									  <a ngbNavLink>Tenant Details</a>
+									  <ng-template ngbNavContent>
+                                        <div class="d-flex justify-content-between">
+                                            <h6 class="card-title mb-1">Tenant Details</h6>
+                                            <li style="margin-top: 1px;" class="icons-list-item"><i class="fa fa-plus-circle"></i></li>
+                                        </div>
+                                        <table class="table" id="myTable2">
+                                          <thead>
+                                              <tr>
+                                                  <th class="wd-lg-8p"><span>Member Name</span></th>
+                                                  <th class="wd-lg-8p"><span>Move In</span></th>
+                                                  <th class="wd-lg-8p"><span>Vacant Date</span></th>
+                                                  <th class="wd-lg-8p"><span>Approved By</span></th>
+                                                  <th class="wd-lg-8p">Action</th>
+                                              </tr>
+                                          </thead>
+                                          <tbody>
+                                              <tr>
+                                                  <td>
+                                                      Karandeep Singh Saluja
+                                                  </td>
+                                                  
+                                                  <td>
+                                                      31 December, 2021
+                                                  </td>
+                  
+                                                  <td>
+                                                      31 December, 2021
+                                                  </td>
+                  
+                                                  <td>
+                                                      Navn Chand Thakur
+                                                  </td>
+                  
+                                                  <td>
+                                                      <a href="javascript:;" class="btn btn-sm btn-info">
+                                                          <i class="las la-pen"></i>
+                                                      </a>
+                                                  </td>
+                                              </tr>
+                                              <tr>
+                                                  <td>
+                                                      Karandeep Singh Saluja
+                                                  </td>
+                                                  
+                                                  <td>
+                                                      31 December, 2021
+                                                  </td>
+                  
+                                                  <td>
+                                                      31 December, 2021
+                                                  </td>
+                  
+                                                  <td>
+                                                      Navn Chand Thakur
+                                                  </td>
+                  
+                                                  <td>
+                                                      <a href="javascript:;" class="btn btn-sm btn-info">
+                                                          <i class="las la-pen"></i>
+                                                      </a>
+                                                  </td>
+                                              </tr>
+                                              <tr>
+                                                  <td>
+                                                      Karandeep Singh Saluja
+                                                  </td>
+                                                  
+                                                  <td>
+                                                      31 December, 2021
+                                                  </td>
+                  
+                                                  <td>
+                                                      31 December, 2021
+                                                  </td>
+                  
+                                                  <td>
+                                                      Navn Chand Thakur
+                                                  </td>
+                  
+                                                  <td>
+                                                      <a href="javascript:;" class="btn btn-sm btn-info">
+                                                          <i class="las la-pen"></i>
+                                                      </a>
+                                                  </td>
+                                              </tr>
+                                              <tr>
+                                                  <td>
+                                                      Karandeep Singh Saluja
+                                                  </td>
+                                                  
+                                                  <td>
+                                                      31 December, 2021
+                                                  </td>
+                  
+                                                  <td>
+                                                      31 December, 2021
+                                                  </td>
+                  
+                                                  <td>
+                                                      Navn Chand Thakur
+                                                  </td>
+                  
+                                                  <td>
+                                                      <a href="javascript:;" class="btn btn-sm btn-info">
+                                                          <i class="las la-pen"></i>
+                                                      </a>
+                                                  </td>
+                                              </tr>
+                                          </tbody>
+                                        </table>
+										<div class="row">
+                                            <h6 class="card-title mb-1">Tenant Details</h6>
+                                            <br><br>
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-3" style="text-align: -webkit-center;">
+                                                        <div class="form-group">
+                                                            <div class="main-img-user avatar-xxl d-none d-sm-block">
+                                                                <img alt="avatar" class="rounded-circle" src="./assets/img/faces/8.jpg">
+                                                            </div>
+                                                            <br>
+                                                            <input type="file" class="form-control"/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <div class="row">
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <select class="form-control">
+                                                                        <option value="">Select Title</option>
+                                                                        <option value="Mr.">Mr.</option>
+                                                                        <option value="Miss.">Miss.</option>
+                                                                        <option value="Mrs.">Mrs.</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input placeholder="Last Name" autocomplete="none" type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input placeholder="First Name" autocomplete="none" type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input placeholder="Middle Name" autocomplete="none" type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input placeholder="Mobile No" autocomplete="none" type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input placeholder="Landline No." autocomplete="none" type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input placeholder="Email ID" autocomplete="none" type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <select class="form-control">
+                                                                        <option value="">Select Gender</option>
+                                                                        <option value="Male">Male</option>
+                                                                        <option value="Female">Female</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input placeholder="Blood Group" autocomplete="none" type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input class="form-control" placeholder="DOB (YYYY-MM-DD)" name="dp"  ngbDatepicker (click)="d.toggle()" #d="ngbDatepicker">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input class="form-control" placeholder="Date of Anniversary (YYYY-MM-DD)" name="dp1"  ngbDatepicker (click)="dn.toggle()" #dn="ngbDatepicker">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <select class="form-control">
+                                                                        <option value="">Proof of Identity</option>
+                                                                        <option value="Aadhar Card">Aadhar Card</option>
+                                                                        <option value="Pan Card">Pan Card</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input type="file" class="form-control"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <h6 class="card-title mb-1">Family Profile</h6>
+                                            <br><br>
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-3" style="text-align: -webkit-center;">
+                                                        <div class="form-group">
+                                                            <div class="main-img-user avatar-xxl d-none d-sm-block">
+                                                                <img alt="avatar" class="rounded-circle" src="./assets/img/faces/8.jpg">
+                                                            </div>
+                                                            <br>
+                                                            <input type="file" class="form-control"/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <div class="row">
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <select class="form-control">
+                                                                        <option value="">Select Title</option>
+                                                                        <option value="Mr.">Mr.</option>
+                                                                        <option value="Miss.">Miss.</option>
+                                                                        <option value="Mrs.">Mrs.</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input placeholder="Full Name" autocomplete="none" type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input placeholder="Relation (with the owner)" autocomplete="none" type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input placeholder="Mobile No" autocomplete="none" type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input placeholder="Email ID" autocomplete="none" type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input placeholder="DOB (DD-MM-YYYY)" autocomplete="none" type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input placeholder="Age" autocomplete="none" type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <select class="form-control">
+                                                                        <option value="">Select Gender</option>
+                                                                        <option value="Male">Male</option>
+                                                                        <option value="Female">Female</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <select class="form-control">
+                                                                        <option value="">Select Occupation</option>
+                                                                        <option value="Service">Service</option>
+                                                                        <option value="Business">Business</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input placeholder="Blood Group" autocomplete="none" type="text" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <select class="form-control">
+                                                                        <option value="">Proof of Identity</option>
+                                                                        <option value="Aadhar Card">Aadhar Card</option>
+                                                                        <option value="Pan Card">Pan Card</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <div class="form-group">
+                                                                    <input type="file" class="form-control"/>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+									  </ng-template>
+									</li>
+
+									<li [ngbNavItem]="7">
+                                        <a ngbNavLink>Transfer</a>
+                                        <ng-template ngbNavContent>
+                                          <div class="row">
+                                              <h6 class="card-title mb-1">Transfer Details</h6>
+                                              <br><br>
+                                              <div class="row">
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <select class="form-control">
+                                                            <option value="">Is Transferred?</option>
+                                                            <option value="Yes">Yes</option>
+                                                            <option value="No">No</option>
+                                                        </select>
+                                                    </div>
+                                                </div>  
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="Approval Date"/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="Tranfer Date"/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="Previous Member Pending Amount"/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <select class="form-control">
+                                                            <option value="">Select Title</option>
+                                                            <option value="Mr.">Mr.</option>
+                                                            <option value="Miss.">Miss.</option>
+                                                            <option value="Mrs.">Mrs.</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <input placeholder="Last Name" autocomplete="none" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <input placeholder="First Name" autocomplete="none" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <input placeholder="Middle Name" autocomplete="none" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <input placeholder="Mobile No" autocomplete="none" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <input placeholder="Landline No." autocomplete="none" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <input placeholder="Email ID" autocomplete="none" type="text" class="form-control">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <select class="form-control">
+                                                            <option value="">Select Gender</option>
+                                                            <option value="Male">Male</option>
+                                                            <option value="Female">Female</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <input type="file" class="form-control"/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <input type="file" class="form-control"/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <input type="file" class="form-control"/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <input type="file" class="form-control"/>
+                                                    </div>
+                                                </div>
+                                              </div>
+                                              <br><br>
+                                              <h6 class="card-title mb-1">Member Tranfer History Details</h6>
+                                              <br><br>
+                                              <table class="table" id="myTable1">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="wd-lg-8p"><span>Type</span></th>
+                                                        <th class="wd-lg-8p"><span>Member Name</span></th>
+                                                        <th class="wd-lg-8p"><span>Approved By</span></th>
+                                                        <th class="wd-lg-8p"><span>Tranfer Date</span></th>
+                                                        <th class="wd-lg-8p"><span>Previous Amount</span></th>
+                                                        <th class="wd-lg-8p">Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <!-- <span class="label text-muted d-flex"><div class="dot-label bg-gray-300 mr-1"></div>Inactive</span> -->
+                                                            FIRST OWNER
+                                                        </td>
+                                                        <td>
+                                                            Megan Peters
+                                                        </td>
+                                                        
+                                                        <td>
+                                                            31 December, 2021
+                                                        </td>
+                        
+                                                        <td>
+                                                            31 December, 2021
+                                                        </td>
+                        
+                                                        <td>
+                                                            100
+                                                        </td>
+                        
+                                                        <td>
+                                                            <a href="javascript:;" class="btn btn-sm btn-info">
+                                                                <i class="las la-pen"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            <!-- <span class="label text-muted d-flex"><div class="dot-label bg-gray-300 mr-1"></div>Inactive</span> -->
+                                                            SECOND OWNER
+                                                        </td>
+                                                        <td>
+                                                            Megan Peters
+                                                        </td>
+                                                        
+                                                        <td>
+                                                            31 December, 2021
+                                                        </td>
+                        
+                                                        <td>
+                                                            31 December, 2021
+                                                        </td>
+                        
+                                                        <td>
+                                                            100
+                                                        </td>
+                        
+                                                        <td>
+                                                            <a href="javascript:;" class="btn btn-sm btn-info">
+                                                                <i class="las la-pen"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                              </table>
+
+                                          </div>
+
+                                        </ng-template>
+                                      </li>
+								  </ul>
+							</div>
+							<div class="panel-body tabs-menu-body main-content-body-right border">
+								<div [ngbNavOutlet]="nav1" class="tab-pane"></div>
+								<div class="tab-content">
+									
+								</div>
+							</div>
+						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /div -->
+</div>

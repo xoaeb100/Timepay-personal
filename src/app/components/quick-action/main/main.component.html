@@ -1,0 +1,540 @@
+<!-- breadcrumb -->
+<div class="breadcrumb-header justify-content-between">
+    <div class="my-auto">
+        <div class="d-flex">
+            <h4 class="content-title mb-0 my-auto">Quick Actions</h4>
+        </div>
+    </div>
+    <div class="d-flex my-xl-auto right-content mr-2">
+        <!-- <div class="pr-1 mb-3 mb-xl-0">
+			<button type="button" (click)="Select2Open(billingFootNote)" placement="bottom" class="btn btn-info btn-icon mr-2"  ngbTooltip="Manage Billing Footnote" >
+                <i class="fa fa-address-card"></i>
+            </button>
+		</div>
+        <div class="pr-1 mb-3 mb-xl-0">
+			<button type="button" (click)="Select2Open(select2Modal)" placement="bottom" class="btn btn-info btn-icon mr-2"  ngbTooltip="Auto Master Add" >
+                <i class="fa fa-user-plus"></i>
+            </button>
+		</div> 
+        <div class="pr-1 mb-3 mb-xl-0">
+            <button type="button" class="btn btn-warning  btn-icon mr-2"><i class="mdi mdi-refresh"></i></button>
+        </div>-->
+    </div>
+</div>
+<!-- breadcrumb -->
+<ng-template #billingFootNote let-modal>
+	<div class="modal-header">
+		<h6 class="modal-title">Create New Poll</h6>
+		<button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	<div class="modal-body">
+		<div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Enter Poll Question here..."/>
+                </div>
+            </div>
+            
+            <div class="col-md-5">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Option 1"/>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Option 2"/>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <li class="icons-list-item" style="float: right;"><i class="fa fa-plus-circle"></i></li>
+            </div>
+            <!-- <div class="col-md-6">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Option 3"/>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Option 4"/>
+                </div>
+            </div> -->
+            <div class="col-md-12">
+                <div class="form-group">
+                    <button class="btn btn-info-gradient btn-rounded btn-block">Create Poll</button>
+                </div>
+            </div>
+        </div>
+		
+	</div>
+	<div class="modal-footer ">
+		<button type="button" class="btn ripple btn-secondary" (click)="modal.close('Save click')">Close</button>
+	</div>
+</ng-template>
+
+<ng-template #select2Modal let-modal>
+	<div class="modal-header">
+		<h6 class="modal-title">Auto Master Add</h6>
+		<button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	<div class="modal-body">
+		<div class="row">
+            <div class="col-sm-6 col-md-6">
+                <div class="form-group">
+					<input type="text" class="form-control" placeholder="Select Account"/>
+				</div>
+            </div>
+            <div class="col-sm-6 col-md-6">
+                <div class="form-group">
+					<input type="text" class="form-control" placeholder="Charge Name"/>
+				</div>
+            </div>
+            <div class="col-sm-6 col-md-6">
+                <div class="form-group">
+					<input type="text" class="form-control" placeholder="Select Type"/>
+				</div>
+            </div>
+            <div class="col-sm-6 col-md-6">
+                <div class="form-group">
+					<input type="text" class="form-control" placeholder="Fixed / Sq.Ft"/>
+				</div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+                <div class="form-group">
+					<input type="text" class="form-control" placeholder="Amount"/>
+				</div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <button class="btn btn-info-gradient btn-rounded btn-block">Save</button>
+                </div>
+            </div>
+        </div>
+		
+	</div>
+	<div class="modal-footer ">
+		<button type="button" class="btn ripple btn-secondary" (click)="modal.close('Save click')">Close</button>
+	</div>
+</ng-template>
+
+<!-- row -->
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="text-wrap">
+					<div class="example">
+						<div class="panel panel-primary tabs-style-2">
+							<div class=" tab-menu-heading">
+								<ul ngbNav #nav1="ngbNav"  class="panel-tabs main-nav-line">
+									<li [ngbNavItem]="1">
+									  <a ngbNavLink>Polls Management</a>
+									  <ng-template ngbNavContent>
+                                        <!-- <button style="float: right" type="button" (click)="Select2Open(billingFootNote)" placement="bottom" class="btn btn-info btn-icon mr-2"  ngbTooltip="Create new Pool" >
+                                            <i class="fa fa-user-plus"></i>
+                                        </button> -->
+                                        <br>
+                                        <div class="row row-xs wd-xl-50p">
+                                            <div class="col-sm-3 col-md-3 mg-t-10 mg-md-t-0"><button (click)="Select2Open(billingFootNote)" class="btn btn-success btn-with-icon btn-block"><i class="typcn typcn-edit"></i> New Poll</button></div>
+                                        </div>
+                                        <br>
+                                        <div class="row row-cards row-deck">
+                                            <div class="col-sm-12 col-lg-4">
+                                                <div class="card">
+                                                    <div class="card-header pb-0">
+                                                        <div class="card-title pb-0 tx-12  mb-3">On the other hand, we denounce with right indignation and dislike imagesralized</div>
+                                                        <p class="tx-12 tx-gray-500 mb-3">09-03-2022 10:30 AM</p>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <div class="row">
+                                                            <div class="col text-center">
+                                                                <label class="tx-12">Today</label>
+                                                                <p class="font-weight-bold tx-20">10</p>
+                                                            </div><!-- col -->
+                                                            <div class="col border-left text-center">
+                                                                <label class="tx-12">This Week</label>
+                                                                <p class="font-weight-bold tx-20">25</p>
+                                                            </div><!-- col -->
+                                                            <div class="col border-left text-center">
+                                                                <label class="tx-12">This Month</label>
+                                                                <p class="font-weight-bold tx-20">53</p>
+                                                            </div><!-- col -->
+                                                        </div><!-- row -->
+                                                        <div class="progress ht-20 mt-4">
+                                                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary ht-20 w-50">50%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-lg-4">
+                                                <div class="card">
+                                                    <div class="card-header pb-0">
+                                                        <div class="card-title pb-0 tx-12  mb-3">On the other hand, we denounce with right indignation and dislike imagesralized</div>
+                                                        <p class="tx-12 tx-gray-500 mb-3">09-03-2022 10:30 AM</p>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <div class="row">
+                                                            <div class="col text-center">
+                                                                <label class="tx-12">Today</label>
+                                                                <p class="font-weight-bold tx-20">10</p>
+                                                            </div><!-- col -->
+                                                            <div class="col border-left text-center">
+                                                                <label class="tx-12">This Week</label>
+                                                                <p class="font-weight-bold tx-20">25</p>
+                                                            </div><!-- col -->
+                                                            <div class="col border-left text-center">
+                                                                <label class="tx-12">This Month</label>
+                                                                <p class="font-weight-bold tx-20">53</p>
+                                                            </div><!-- col -->
+                                                        </div><!-- row -->
+                                                        <div class="progress ht-20 mt-4">
+                                                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary ht-20 w-50">50%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-lg-4">
+                                                <div class="card">
+                                                    <div class="card-header pb-0">
+                                                        <div class="card-title pb-0 tx-12  mb-3">On the other hand, we denounce with right indignation and dislike imagesralized</div>
+                                                        <p class="tx-12 tx-gray-500 mb-3">09-03-2022 10:30 AM</p>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <div class="row">
+                                                            <div class="col text-center">
+                                                                <label class="tx-12">Today</label>
+                                                                <p class="font-weight-bold tx-20">10</p>
+                                                            </div><!-- col -->
+                                                            <div class="col border-left text-center">
+                                                                <label class="tx-12">This Week</label>
+                                                                <p class="font-weight-bold tx-20">25</p>
+                                                            </div><!-- col -->
+                                                            <div class="col border-left text-center">
+                                                                <label class="tx-12">This Month</label>
+                                                                <p class="font-weight-bold tx-20">53</p>
+                                                            </div><!-- col -->
+                                                        </div><!-- row -->
+                                                        <div class="progress ht-20 mt-4">
+                                                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary ht-20 w-50">50%</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="table-responsive">
+                                            <table class="table table-bordered table-hover" id="myTable1">
+                                                <thead>
+                                                    <tr>
+                                                        <th class="wd-lg-8p">Poll Question</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Karandeep Saluja</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div> -->
+									  </ng-template>
+									</li>
+                                    <li [ngbNavItem]="4">
+                                        <a ngbNavLink>Common Chat</a>
+                                        <ng-template ngbNavContent>
+                                            <br>
+                                            <!-- row -->
+                                            <div class="row row-sm main-content-app mb-4">
+                                                <div class="col-xl-4 col-lg-5">
+                                                    <div class="card">
+                                                        <div class="main-content-left main-content-left-chat">
+                                                            <nav ngbNav #nav="ngbNav" class="main-nav-line main-nav-line-chat">
+                                                                <ng-container ngbNavItem>
+                                                                    <a ngbNavLink>My Society</a>
+                                                                </ng-container>
+                                                                <ng-container ngbNavItem>
+                                                                    <a ngbNavLink>Groups</a>
+                                                                </ng-container>
+                                                            </nav>
+
+                                                            <div class="main-chat-contacts-wrapper">
+                                                                <label class="main-content-label main-content-label-sm">Active Contacts (5)</label>
+                                                                <div class="main-chat-contacts" id="chatActiveContacts">
+                                                                    <div>
+                                                                        <div class="main-img-user online"><img alt="" src="assets/img/faces/5.jpg"></div>
+                                                                        <small>Adrian</small>
+                                                                    </div>
+                                                                    <div>
+                                                                        <div class="main-img-user online"><img alt="" src="assets/img/faces/5.jpg"></div>
+                                                                        <small>John</small>
+                                                                    </div>
+                                                                    <div>
+                                                                        <div class="main-img-user online"><img alt="" src="assets/img/faces/5.jpg"></div>
+                                                                        <small>Daniel</small>
+                                                                    </div>
+                                                                    <div>
+                                                                        <div class="main-img-user online"><img alt="" src="assets/img/faces/5.jpg"></div>
+                                                                        <small>Katherine</small>
+                                                                    </div>
+                                                                    <div>
+                                                                        <div class="main-img-user online"><img alt="" src="assets/img/faces/5.jpg"></div>
+                                                                        <small>Raymart</small>
+                                                                    </div>
+                                                                    <div>
+                                                                        <div class="main-img-user online"><img alt="" src="assets/img/faces/5.jpg"></div>
+                                                                        <small>Junrisk</small>
+                                                                    </div>
+                                                                    <div>
+                                                                        <div class="main-chat-contacts-more">
+                                                                            20+
+                                                                        </div><small>More</small>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- main-chat-active-contacts -->
+
+
+                                                            <div class="main-chat-list" id="ChatList">
+                                                                <div class="media new selected">
+                                                                    <div class="main-img-user online">
+                                                                        <img alt="" src="assets/img/faces/5.jpg"> <span>2</span>
+                                                                    </div>
+                                                                    <div class="media-body">
+                                                                        <div class="media-contact-name">
+                                                                            <span>Socrates Itumay</span> <span>2 hours</span>
+                                                                        </div>
+                                                                        <p>Nam quam nunc, blandit vel aecenas et ante tincid</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="media new">
+                                                                    <div class="main-img-user">
+                                                                        <img alt="" src="assets/img/faces/5.jpg"> <span>1</span>
+                                                                    </div>
+                                                                    <div class="media-body">
+                                                                        <div class="media-contact-name">
+                                                                            <span>Dexter dela Cruz</span> <span>3 hours</span>
+                                                                        </div>
+                                                                        <p>Maec enas tempus, tellus eget con dime ntum rhoncus, sem quam</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="media">
+                                                                    <div class="main-img-user online"><img alt="" src="assets/img/faces/5.jpg"></div>
+                                                                    <div class="media-body">
+                                                                        <div class="media-contact-name">
+                                                                            <span>Reynante Labares</span> <span>10 hours</span>
+                                                                        </div>
+                                                                        <p>Nam quam nunc, bl ndit vel aecenas et ante tincid</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="media">
+                                                                    <div class="main-img-user"><img alt="" src="assets/img/faces/5.jpg"></div>
+                                                                    <div class="media-body">
+                                                                        <div class="media-contact-name">
+                                                                            <span>Joyce Chua</span> <span>2 days</span>
+                                                                        </div>
+                                                                        <p>Ma ecenas tempus, tellus eget con dimen tum rhoncus, sem quam</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="media">
+                                                                    <div class="main-img-user"><img alt="" src="assets/img/faces/5.jpg"></div>
+                                                                    <div class="media-body">
+                                                                        <div class="media-contact-name">
+                                                                            <span>Rolando Paloso</span> <span>2 days</span>
+                                                                        </div>
+                                                                        <p>Nam quam nunc, blandit vel aecenas et ante tincid</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="media new">
+                                                                    <div class="main-img-user">
+                                                                        <img alt="" src="assets/img/faces/5.jpg"> <span>1</span>
+                                                                    </div>
+                                                                    <div class="media-body">
+                                                                        <div class="media-contact-name">
+                                                                            <span>Ariana Monino</span> <span>3 days</span>
+                                                                        </div>
+                                                                        <p>Maece nas tempus, tellus eget cond imentum rhoncus, sem quam</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div><!-- main-chat-list -->
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-xl-8 col-lg-7">
+                                                    <div class="card">
+                                                        <a class="main-header-arrow" href="javascript:;" id="ChatBodyHide"><i class="icon ion-md-arrow-back"></i></a>
+                                                        <div class="main-content-body main-content-body-chat">
+                                                            <div class="main-chat-header">
+                                                                <div class="main-img-user"><img alt="" src="../../assets/img/faces/9.jpg"></div>
+                                                                <div class="main-chat-msg-name">
+                                                                    <h6>Reynante Labares</h6><small>Last seen: 2 minutes ago</small>
+                                                                </div>
+                                                                <nav class="nav">
+                                                                    <a class="nav-link"  href="javascript:;"><i class="icon ion-md-more"></i></a>
+                                                                    <a class="nav-link"  href="javascript:;" placement="top" ngbTooltip="Call"><i class="icon ion-ios-call"></i></a>
+                                                                    <a class="nav-link"  href="javascript:;" placement="top" ngbTooltip="Archive"><i class="icon ion-ios-filing"></i></a>
+                                                                    <a class="nav-link"  href="javascript:;" placement="top" ngbTooltip="Trash"><i class="icon ion-md-trash"></i></a> 
+                                                                    <a class="nav-link"  href="javascript:;" placement="top" ngbTooltip="View Info"><i class="icon ion-md-information-circle"></i></a>
+                                                                </nav>
+                                                            </div><!-- main-chat-header -->
+                                                            <div class="main-chat-body" id="ChatBody">
+                                                                <div class="content-inner">
+                                                                    <label class="main-chat-time"><span>3 days ago</span></label>
+                                                                    <div class="media flex-row-reverse">
+                                                                        <div class="main-img-user online"><img alt="" src="../../assets/img/faces/9.jpg"></div>
+                                                                        <div class="media-body">
+                                                                            <div class="main-msg-wrapper right">
+                                                                                Nulla consequat massa quis enim. Donec pede justo, fringilla vel...
+                                                                            </div>
+                                                                            <div class="main-msg-wrapper right">
+                                                                                rhoncus ut, imperdiet a, venenatis vitae, justo...
+                                                                            </div>
+                                                                            <div class="main-msg-wrapper pd-0"><img alt="" class="wd-100 ht-100"
+                                                                                    src="../../assets/img/ecommerce/01.jpg"></div>
+                                                                            <div>
+                                                                                <span>9:48 am</span> <a href="javascript:;"><i class="icon ion-android-more-horizontal"></i></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="media">
+                                                                        <div class="main-img-user online"><img alt="" src="../../assets/img/faces/6.jpg"></div>
+                                                                        <div class="media-body">
+                                                                            <div class="main-msg-wrapper left">
+                                                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                                                                                dolor.
+                                                                            </div>
+                                                                            <div>
+                                                                                <span>9:32 am</span> <a href="javascript:;"><i class="icon ion-android-more-horizontal"></i></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="media flex-row-reverse">
+                                                                        <div class="main-img-user online"><img alt="" src="../../assets/img/faces/9.jpg"></div>
+                                                                        <div class="media-body">
+                                                                            <div class="main-msg-wrapper right">
+                                                                                Nullam dictum felis eu pede mollis pretium
+                                                                            </div>
+                                                                            <div>
+                                                                                <span>11:22 am</span> <a href="javascript:;"><i
+                                                                                        class="icon ion-android-more-horizontal"></i></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div><label class="main-chat-time"><span>Yesterday</span></label>
+                                                                    <div class="media">
+                                                                        <div class="main-img-user online"><img alt="" src="../../assets/img/faces/6.jpg"></div>
+                                                                        <div class="media-body">
+                                                                            <div class="main-msg-wrapper left">
+                                                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                                                                                dolor.
+                                                                            </div>
+                                                                            <div>
+                                                                                <span>9:32 am</span> <a href="javascript:;"><i class="icon ion-android-more-horizontal"></i></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="media flex-row-reverse">
+                                                                        <div class="main-img-user online"><img alt="" src="../../assets/img/faces/9.jpg"></div>
+                                                                        <div class="media-body">
+                                                                            <div class="main-msg-wrapper right">
+                                                                                Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat
+                                                                                massa quis enim. Donec pede justo, fringilla vel, aliquet nec. In enim justo,
+                                                                                rhoncus ut, imperdiet a, venenatis vitae, justo.
+                                                                            </div>
+                                                                            <div class="main-msg-wrapper right">
+                                                                                Nullam dictum felis eu pede mollis pretium
+                                                                            </div>
+                                                                            <div>
+                                                                                <span>9:48 am</span> <a href="javascript:;"><i class="icon ion-android-more-horizontal"></i></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div><label class="main-chat-time"><span>Today</span></label>
+                                                                    <div class="media">
+                                                                        <div class="main-img-user online"><img alt="" src="../../assets/img/faces/6.jpg"></div>
+                                                                        <div class="media-body">
+                                                                            <div class="main-msg-wrapper left">
+                                                                                Maecenas tempus, tellus eget condimentum rhoncus
+                                                                            </div>
+                                                                            <div class="main-msg-wrapper left">
+                                                                                Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio
+                                                                                et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.
+                                                                            </div>
+                                                                            <div>
+                                                                                <span>10:12 am</span> <a href="javascript:;"><i
+                                                                                        class="icon ion-android-more-horizontal"></i></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="media flex-row-reverse">
+                                                                        <div class="main-img-user online"><img alt="" src="../../assets/img/faces/9.jpg"></div>
+                                                                        <div class="media-body">
+                                                                            <div class="main-msg-wrapper right">
+                                                                                Maecenas tempus, tellus eget condimentum rhoncus
+                                                                            </div>
+                                                                            <div class="main-msg-wrapper right">
+                                                                                Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio
+                                                                                et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.
+                                                                            </div>
+                                                                            <div>
+                                                                                <span>09:40 am</span> <a href="javascript:;"><i
+                                                                                        class="icon ion-android-more-horizontal"></i></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="main-chat-footer">
+                                                            <nav class="nav">
+                                                                <a class="nav-link" href="javascript:;" placement="top" ngbTooltip="Add Photo"><i class="fas fa-camera"></i></a>
+                                                                <a class="nav-link" href="javascript:;" placement="top" ngbTooltip="Attach a File"><i
+                                                                        class="fas fa-paperclip"></i></a> <a class="nav-link" href="javascript:;" placement="top"
+                                                                    ngbTooltip="Add Emoticons"><i class="far fa-smile"></i></a> <a class="nav-link" href="javascript:;"><i
+                                                                        class="fas fa-ellipsis-v"></i></a>
+                                                            </nav><input class="form-control" placeholder="Type your message here..." type="text"> <a
+                                                                class="main-msg-send" href="javascript:;"><i class="far fa-paper-plane"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- row -->
+                                        </ng-template>
+                                      </li>
+									<li [ngbNavItem]="2">
+									  <a ngbNavLink>Complaint Management</a>
+									  <ng-template ngbNavContent>
+                                          <br>
+									  </ng-template>
+									</li>
+                                    <li [ngbNavItem]="3">
+                                        <a ngbNavLink>Ammenities Management</a>
+                                        <ng-template ngbNavContent>
+                                            <br>
+                                        </ng-template>
+                                    </li>
+									
+                                    <li [ngbNavItem]="5">
+                                        <a ngbNavLink>Request Management</a>
+                                        <ng-template ngbNavContent>
+                                            <br>
+                                        </ng-template>
+                                    </li>
+								  </ul>
+							</div>
+							<div class="panel-body tabs-menu-body main-content-body-right border">
+								<div [ngbNavOutlet]="nav1" class="tab-pane"></div>
+								<div class="tab-content">
+									
+								</div>
+							</div>
+						
+						</div>
+					</div>
+				</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- row closed -->

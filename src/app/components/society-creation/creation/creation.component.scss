@@ -1,0 +1,9 @@
+.ck-editor__editable {
+    min-height: 150px !important;
+}
+:host ::ng-deep .ck-editor__editable {
+    min-height: 150px !important;
+}
+.main-img-user::after{
+    display: none !important;
+}

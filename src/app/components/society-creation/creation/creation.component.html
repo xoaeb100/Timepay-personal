@@ -1,0 +1,1150 @@
+<!-- breadcrumb -->
+<div class="breadcrumb-header justify-content-between">
+	<div class="my-auto">
+		<div class="d-flex">
+			<h4 class="content-title mb-0 my-auto">Dashboard</h4><span class="text-muted mt-1 tx-13 ml-2 mb-0">/ Merchant Creation</span>
+		</div>
+	</div>
+	<!-- <div class="d-flex my-xl-auto right-content mr-2">
+		<div class="pr-1 mb-3 mb-xl-0">
+			<button type="button" class="btn btn-info btn-icon mr-2"><i class="mdi mdi-filter-variant"></i></button>
+		</div>
+		<div class="pr-1 mb-3 mb-xl-0">
+			<button type="button" class="btn btn-danger btn-icon mr-2"><i class="mdi mdi-star"></i></button>
+		</div>
+		<div class="pr-1 mb-3 mb-xl-0">
+			<button type="button" class="btn btn-warning  btn-icon mr-2"><i class="mdi mdi-refresh"></i></button>
+		</div>
+	</div> -->
+</div>
+<!-- breadcrumb -->
+
+<!-- row -->
+<div class="row">
+	<div class="col-lg-12 col-md-12">
+		<div class="card">
+			<div class="card-body">
+				<div class="main-content-label mg-b-5">
+					Society Creation
+				</div>
+				<!-- <p class="mg-b-20">It is Very Easy to Customize and it uses in your website apllication.</p> -->
+				<div id="wizard1">
+					<aw-wizard>
+						<aw-wizard-step stepTitle="Society Info">
+							<br>
+							<div class="row row-xs">
+
+								<h6 class="card-title mb-1">Society Details</h6>
+								<br><br>
+								<div class="col-md-12">
+									<div class="row">
+										<div class="col-md-3" style="text-align: -webkit-center;">
+											<div class="form-group">
+												<div class="main-img-user avatar-xxl d-none d-sm-block">
+													<img alt="avatar" class="rounded-circle" src="./assets/img/faces/8.jpg">
+												</div>
+												<br>
+												<input type="file" class="form-control"/>
+											</div>
+										</div>
+										<div class="col-md-9">
+											<div class="row">
+
+												<div class="col-md-3">
+													<div class="form-group">
+														<select class="form-control">
+															<option value="">Select Merchant Type</option>
+															<option value="Residential">Residential</option>
+															<option value="Commercial">Commercial</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-md-3">
+													<div class="form-group">
+														<select class="form-control">
+															<option value="">Select Sub Type</option>
+															<option value="Society">Society</option>
+															<option value="Bungalow">Bungalow</option>
+															<option value="Row House">Row House</option>
+															<option value="Plot">Plot</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-md-3">
+													<div class="form-group">
+														<input placeholder="Merchant Full Name" autocomplete="none" type="text" class="form-control">
+													</div>
+												</div>
+												<div class="col-md-3">
+													<div class="form-group">
+														<input placeholder="Merchant Registration No" autocomplete="none" type="text" class="form-control">
+													</div>
+												</div>
+												<div class="col-md-3">
+													<div class="form-group">
+														<input placeholder="Registration Date" autocomplete="none" 
+															type="text" class="form-control" name="dp1"  ngbDatepicker (click)="dn.toggle()" #dn="ngbDatepicker">
+													</div>
+												</div>
+												<div class="col-md-3">
+													<div class="form-group">
+														<input placeholder="Primary Email ID" autocomplete="none" type="text" class="form-control">
+													</div>
+												</div>
+												<div class="col-md-3">
+													<div class="form-group">
+														<input placeholder="Secondary Email ID" autocomplete="none" type="text" class="form-control">
+													</div>
+												</div>
+												<div class="col-md-3">
+													<div class="form-group">
+														<input placeholder="Contact No" autocomplete="none" type="text" class="form-control">
+													</div>
+												</div>
+												<div class="col-md-12">
+													<div class="form-group">
+														<input placeholder="Merchant Full Address" autocomplete="none" type="text" class="form-control">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="Merchant Pincode" autocomplete="none" type="number" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="Merchant Location" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="Merchant City" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="Merchant State" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="GSTIN" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="UID No" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="PAN No" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="TAN No" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<select class="form-control">
+													<option value="">Select Area Type</option>
+													<option value="Carpet">Carpet</option>
+													<option value="Built Up">Built Up</option>
+													<option value="Super Built up">Carpet</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<select class="form-control">
+													<option value="">Select Area Unit Type</option>
+													<option value="Square Feet">Square Feet</option>
+													<option value="Square Meter">Square Meter</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<ng-select class="form-control" placeholder="Choose Secondary language">
+													<ng-option value="Hindi">
+														Hindi
+													</ng-option>
+													<ng-option value="Marathi">
+														Marathi
+													</ng-option>
+													<ng-option value="Other">
+														Other
+													</ng-option>
+												</ng-select>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<select class="form-control" (change)="onGstChange($event)">
+													<option value="">Is GST Included?</option>
+													<option value="Yes">Yes</option>
+													<option value="No">No</option>
+												</select>
+											</div>
+										</div>
+
+										<div class="col-md-3" *ngIf="showGstFields">
+											<div class="form-group">
+												<input class="form-control" placeholder="CGST Account Code"/>
+											</div>
+										</div>
+										<div class="col-md-3" *ngIf="showGstFields">
+											<div class="form-group">
+												<input class="form-control" placeholder="SGST Account Code"/>
+											</div>
+										</div>
+										<div class="col-md-3" *ngIf="showGstFields">
+											<div class="form-group">
+												<select class="form-control">
+													<option value="">Interest on Dues Apply for GST</option>
+													<option value="Yes">Yes</option>
+													<option value="No">No</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-3" *ngIf="showGstFields">
+											<div class="form-group">
+												<select class="form-control">
+													<option value="">Interest on Dues Apply for GST Exampt Amount Limit</option>
+													<option value="Yes">Yes</option>
+													<option value="No">No</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-3" *ngIf="showGstFields">
+											<div class="form-group">
+												<input class="form-control" placeholder="Rate of CGST"/>
+											</div>
+										</div>
+										<div class="col-md-3" *ngIf="showGstFields">
+											<div class="form-group">
+												<input class="form-control" placeholder="Rate of SGST"/>
+											</div>
+										</div>
+										<div class="col-md-3" *ngIf="showGstFields">
+											<div class="form-group">
+												<input class="form-control" placeholder="CGST Rounded Upto"/>
+											</div>
+										</div>
+										<div class="col-md-3" *ngIf="showGstFields">
+											<div class="form-group">
+												<input class="form-control" placeholder="SGST Rounded Upto"/>
+											</div>
+										</div>
+										<div class="col-md-3" *ngIf="showGstFields">
+											<div class="form-group">
+												<input class="form-control" placeholder="Limit of GST Exampt"/>
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="form-group">
+												<input type="text" placeholder="Special Message (if any)" class="form-control"/>
+											</div>
+										</div>
+									</div>
+									<h6 class="card-title mb-1">Interest Setting Details</h6>
+									<div class="row">
+										<div class="col-md-4">
+											<div class="form-group">
+												<select class="form-control">
+													<option value="">Select Method</option>
+													<option value="Day Wise">Day Wise</option>
+													<option value="Monthly">Monthly</option>
+													<option value="Quarterly">Quarterly</option>
+													<option value="Annually">Annually</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<select class="form-control">
+													<option value="">Select Type</option>
+													<option value="Simple Interest">Simple Interest</option>
+													<option value="Compound Interest">Compound Interest</option>
+													<option value="Double Interest">Double Interest</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<select class="form-control">
+													<option value="">Select Working Head</option>
+													<option value="Interest First">Interest First</option>
+													<option value="Principal First">Principal First</option>
+												</select>
+											</div>
+										</div>		
+									</div>
+									<h6 class="card-title mb-1">Balance Sheet Folder for Merchant</h6>
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-group">
+												<ckeditor [config]="{ placeholder: 'Enter Footer Note Here..' }" [editor]="Editor" data="" skin="moono-lisa" language="en" (ready)="onReady($event)"></ckeditor>	
+											</div>
+										</div>
+
+										<div class="col-md-6">
+											<div class="form-group">
+												<ckeditor [config]="{ placeholder: 'Enter Footer Note Here..' }" [editor]="Editor" data="" skin="moono-lisa" language="en" (ready)="onReady($event)"></ckeditor>	
+											</div>
+										</div>
+									</div>
+									<h6 class="card-title mb-1">SIGNATURE DETAILS</h6>
+									<br>
+									<div class="row">
+										<div class="col-md-6">
+											<p class="mg-b-10">Bill / Receipt</p>
+											<div class="form-group">
+												<ng-select class="form-control" [multiple]="true" placeholder="Choose One">
+													<ng-option value="Secretary">
+														Secretary
+													</ng-option>
+													<ng-option value="Chairman">
+														Chairman
+													</ng-option>
+													<ng-option value="Vice Chairman">
+														Vice Chairman
+													</ng-option>
+													<ng-option value="Treasurer">
+														Treasurer
+													</ng-option>
+												</ng-select>
+											</div>
+										</div>
+										<div class="col-md-6">
+											<p class="mg-b-10">Voucher</p>
+											<div class="form-group">
+												<ng-select class="form-control" [multiple]="true" placeholder="Choose One">
+													<ng-option value="Secretary">
+														Secretary
+													</ng-option>
+													<ng-option value="Chairman">
+														Chairman
+													</ng-option>
+													<ng-option value="Vice Chairman">
+														Vice Chairman
+													</ng-option>
+													<ng-option value="Treasurer">
+														Treasurer
+													</ng-option>
+												</ng-select>
+											</div>
+										</div>
+									</div>
+									<div class="d-flex justify-content-between">
+										<h6 class="card-title mb-1">AUTHORISED SHARE CAPITAL DETAILS</h6>
+									</div>
+									<div class="row">
+										<div class="col-md-3">
+											<div class="form-group">
+												<input type="text" class="form-control"
+												 	placeholder="Amount"/>
+											</div>
+										</div>
+										<div class="col-md-9">
+											<div class="form-group">
+												<input type="text" class="form-control"
+												 	placeholder="Enter Liabilities"/>
+											</div>
+										</div>										
+									</div>
+								</div>
+							</div>
+							<button class="btn btn-primary pull-right" type="submit" awNextStep >Next</button>
+						</aw-wizard-step>
+						
+						<aw-wizard-step stepTitle="IMP User and Password">
+							<br>
+							<div class="d-flex justify-content-between">
+								<h6 class="card-title mb-1">IMP User & Passoword</h6>
+								<li class="icons-list-item" style="margin-top: -10px;" (click)="Select2Open(select2Modal)"><i class="fa fa-plus-circle"></i></li>
+							</div>
+							<ng-template #select2Modal let-modal>
+								<div class="modal-header">
+									<h6 class="modal-title">IMP User & Password</h6>
+									<button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<div class="row">
+										<div class="col-md-12" style="padding-bottom: 20px;">
+											<label>IMP Title</label>
+											<input type="text" class="form-control" placeholder="Ex: Income Tax Return "/>
+										</div>
+										<div class="col-md-6" style="padding-bottom: 20px;">
+											<label>IMP Ref No</label>
+											<input type="text" class="form-control" placeholder="Ex: PAN No"/>
+										</div>
+										<div class="col-md-6" style="padding-bottom: 20px;">
+											<label>IMP Username</label>
+											<input type="text" class="form-control" placeholder="Enter IMP Username here"/>
+										</div>
+										<div class="col-md-6" style="padding-bottom: 20px;">
+											<label>IMP Password</label>
+											<input type="text" class="form-control" placeholder="Enter IMP Login Password"/>
+										</div>
+										<div class="col-md-6" style="padding-bottom: 20px;">
+											<label>IMP Authorize Mobile No</label>
+											<input type="text" class="form-control" placeholder="Enter Authorize Mobile No."/>
+										</div>
+										<div class="col-md-12">
+											<div class="form-group">
+												<button class="btn btn-info-gradient btn-rounded btn-block">Add New</button>
+											</div>
+										</div>
+									</div>
+									
+								</div>
+								<div class="modal-footer ">
+									<button type="button" class="btn ripple btn-secondary" (click)="modal.close('Save click')">Close</button>
+								</div>
+							</ng-template>
+							<br>
+							<div class="row">
+								<h6 class="card-title mb-1">Income Tax Return</h6>
+								<br>
+								<div class="col-md-12">
+									<div class="row">
+										<div class="col-md-2">
+											<div class="form-group">
+												<input placeholder="PAN No" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-2">
+											<div class="form-group">
+												<input placeholder="Username" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-2">
+											<div class="form-group">
+												<input placeholder="Password" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="Authorize OTP Mobile No" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="Authorizer Name" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<h6 class="card-title mb-1">TDS Return</h6>
+								<br>
+								<div class="col-md-12">
+									<div class="row">
+										<div class="col-md-2">
+											<div class="form-group">
+												<input placeholder="TAN No" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-2">
+											<div class="form-group">
+												<input placeholder="Username" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-2">
+											<div class="form-group">
+												<input placeholder="Password" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="Authorize OTP Mobile No" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="Authorizer Name" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<h6 class="card-title mb-1">GST return</h6>
+								<br>
+								<div class="col-md-12">
+									<div class="row">
+										<div class="col-md-2">
+											<div class="form-group">
+												<input placeholder="GST No" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-2">
+											<div class="form-group">
+												<input placeholder="Username" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-2">
+											<div class="form-group">
+												<input placeholder="Password" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="Authorize OTP Mobile No" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="Authorizer Name" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="d-flex justify-content-between">
+									<h6 class="card-title mb-1">Property Tax Login</h6>
+									<li class="icons-list-item" style="margin-top: -10px;"><i class="fa fa-plus-circle"></i></li>
+								</div>
+								<!-- <h6 class="card-title mb-1">Property Tax Login</h6> -->
+								<br>
+								<div class="col-md-12">
+									<div class="row">
+										<div class="col-md-2">
+											<div class="form-group">
+												<input placeholder="Property Tax No" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-2">
+											<div class="form-group">
+												<input placeholder="Username" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-2">
+											<div class="form-group">
+												<input placeholder="Password" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="Authorize OTP Mobile No" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="Authorizer Name" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="d-flex justify-content-between">
+									<h6 class="card-title mb-1">Water Tax</h6>
+									<li class="icons-list-item" style="margin-top: -10px;"><i class="fa fa-plus-circle"></i></li>
+								</div>
+								<!-- <h6 class="card-title mb-1">Water Tax</h6> -->
+								<br>
+								<div class="col-md-12">
+									<div class="row">
+										<div class="col-md-2">
+											<div class="form-group">
+												<input placeholder="Water Tax No" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-2">
+											<div class="form-group">
+												<input placeholder="Username" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-2">
+											<div class="form-group">
+												<input placeholder="Password" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="Authorize OTP Mobile No" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="Authorizer Name" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="d-flex justify-content-between">
+									<h6 class="card-title mb-1">Electricity</h6>
+									<li class="icons-list-item" style="margin-top: -10px;"><i class="fa fa-plus-circle"></i></li>
+								</div>
+								<!-- <h6 class="card-title mb-1">Electricity</h6> -->
+								<br>
+								<div class="col-md-12">
+									<div class="row">
+										<div class="col-md-2">
+											<div class="form-group">
+												<input placeholder="Consumer No" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-2">
+											<div class="form-group">
+												<input placeholder="Username" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-2">
+											<div class="form-group">
+												<input placeholder="Password" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="Authorize OTP Mobile No" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="Authorizer Name" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+							</div>
+							<button class="btn btn-secondary pull-right mr-1" type="button" awPreviousStep>Previous</button> &nbsp;
+							<button class="btn btn-primary pull-right" type="button" awNextStep>Next</button> &nbsp;
+						</aw-wizard-step>
+						
+						<aw-wizard-step stepTitle="MC Info">
+							<br>
+								<h6 class="card-title mb-1">MC Info</h6>
+							<br>
+							<div class="row">
+								<br>
+								<div class="col-md-12">
+									<div class="row">
+										<div class="col-md-4">
+											<div class="form-group">
+												<input placeholder="Period of MC Committee" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<input placeholder="Start Date" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<input placeholder="End Date" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<div class="d-flex justify-content-between">
+								<h6 class="card-title mb-1">Committee Member Details</h6>
+								<li class="icons-list-item" style="margin-top: -10px;"><i class="fa fa-plus-circle"></i></li>
+							</div>
+							<div class="row">
+								<br>
+								<div class="col-md-12">
+									<div class="row">
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="Full Name" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="Enter Designation" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="Whatsapp No" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="Email ID" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>Aadhar Card</label>
+												<input placeholder="" autocomplete="none" type="file" class="form-control">
+												<a href="#">View Preview</a>
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>PAN Card</label>
+												<input placeholder="" autocomplete="none" type="file" class="form-control">
+												<a href="#">View Preview</a>
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>Resignation Letter</label>
+												<input placeholder="" autocomplete="none" type="file" class="form-control">
+												<a href="#">View Preview</a>
+											</div>
+										</div>
+										
+									</div>
+								</div>
+							</div>
+							<button class="btn btn-secondary pull-right mr-1" type="button" awPreviousStep>Previous</button> &nbsp;
+							<button class="btn btn-primary pull-right" type="button" awNextStep>Next</button> &nbsp;
+						</aw-wizard-step>
+						
+						<aw-wizard-step stepTitle="Staff Info">
+							<br>
+							<div class="d-flex justify-content-between">
+								<h6 class="card-title mb-1">Staff Details</h6>
+								<li class="icons-list-item" style="margin-top: -10px;"><i class="fa fa-plus-circle"></i></li>
+							</div>
+							<!-- <h6 class="card-title mb-1">Staff Details</h6> -->
+							<br>
+							<div class="row">
+								<br>
+								<div class="col-md-12">
+									<div class="row">
+										<div class="col-md-3">
+											<div class="form-group">
+												<select class="form-control">
+													<option value="">Staff Category</option>
+													<option value="">Option 1</option>
+													<option value="">Option 2</option>
+													<option value="">Option 3</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="Full Name" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="Enter Designation" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="Whatsapp No" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="Email ID" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+
+										<div class="col-md-12">
+											<div class="form-group">
+												<input placeholder="Full Address" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="Pincode" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="Location" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="City" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="State" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>Staff Photo</label>
+												<input placeholder="" autocomplete="none" type="file" class="form-control">
+												<a href="#">View Preview</a>
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>Aadhar Card</label>
+												<input placeholder="" autocomplete="none" type="file" class="form-control">
+												<a href="#">View Preview</a>
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>PAN Card</label>
+												<input placeholder="" autocomplete="none" type="file" class="form-control">
+												<a href="#">View Preview</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<br>
+							<button class="btn btn-secondary pull-right mr-1" type="button" awPreviousStep>Previous</button> &nbsp;
+							<button class="btn btn-primary pull-right" type="button" awNextStep>Next</button> &nbsp;
+
+						</aw-wizard-step>
+						
+						<aw-wizard-step stepTitle="Vendor's Info">
+							<br>
+							<div class="d-flex justify-content-between">
+								<h6 class="card-title mb-1">Vendor Details</h6>
+								<li class="icons-list-item" style="margin-top: -10px;"><i class="fa fa-plus-circle"></i></li>
+							</div>
+							<!-- <h6 class="card-title mb-1">Staff Details</h6> -->
+							<br>
+							<div class="row">
+								<br>
+								<div class="col-md-12">
+									<div class="row">
+										<div class="col-md-3">
+											<div class="form-group">
+												<select class="form-control">
+													<option value="">Vendor Category</option>
+													<option value="">Option 1</option>
+													<option value="">Option 2</option>
+													<option value="">Option 3</option>
+												</select>
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="Company Name" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="Proprietor / Owner Name" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="Whatsapp No" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="Email ID" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="Pan No" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="GST No" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+
+										<div class="col-md-12">
+											<div class="form-group">
+												<input placeholder="Full Address" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="Pincode" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="Location" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="City" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<input placeholder="State" autocomplete="none" type="text" class="form-control">
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>Vendor Photo</label>
+												<input placeholder="" autocomplete="none" type="file" class="form-control">
+												<a href="#">View Preview</a>
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>Aadhar Card</label>
+												<input placeholder="" autocomplete="none" type="file" class="form-control">
+												<a href="#">View Preview</a>
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>PAN Card</label>
+												<input placeholder="" autocomplete="none" type="file" class="form-control">
+												<a href="#">View Preview</a>
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>GST Certificate</label>
+												<input placeholder="" autocomplete="none" type="file" class="form-control">
+												<a href="#">View Preview</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<br>
+							<button class="btn btn-secondary pull-right mr-1" type="button" awPreviousStep>Previous</button> &nbsp;
+							<button class="btn btn-primary pull-right" type="button" awNextStep>Next</button> &nbsp;
+
+						</aw-wizard-step>
+						
+						<aw-wizard-completion-step stepTitle="Documents" awEnableBackLinks>
+							<br>
+							<div class="d-flex justify-content-between">
+								<h6 class="card-title mb-1">Society Documents</h6>
+								<li class="icons-list-item" style="margin-top: -10px;"><i class="fa fa-plus-circle"></i></li>
+							</div>
+							<!-- <h6 class="card-title mb-1">Staff Details</h6> -->
+							<div class="row">
+								<div class="col-md-12">
+									<div class="row">
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>Society Reg Certificate</label>
+												<input placeholder="" autocomplete="none" type="file" class="form-control">
+												<a href="#">View Preview</a>
+											</div>
+										</div>
+										
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>Pan Card</label>
+												<input placeholder="" autocomplete="none" type="file" class="form-control">
+												<a href="#">View Preview</a>
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>TAN Card</label>
+												<input placeholder="" autocomplete="none" type="file" class="form-control">
+												<a href="#">View Preview</a>
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>GST Certificate</label>
+												<input placeholder="" autocomplete="none" type="file" class="form-control">
+												<a href="#">View Preview</a>
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>Society IOD</label>
+												<input placeholder="" autocomplete="none" type="file" class="form-control">
+												<a href="#">View Preview</a>
+											</div>
+										</div>
+										
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>Commenment Certificate (CC)</label>
+												<input placeholder="" autocomplete="none" type="file" class="form-control">
+												<a href="#">View Preview</a>
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>Occupancy Certificate</label>
+												<input placeholder="" autocomplete="none" type="file" class="form-control">
+												<a href="#">View Preview</a>
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>Building Completion Certificate (BCC)</label>
+												<input placeholder="" autocomplete="none" type="file" class="form-control">
+												<a href="#">View Preview</a>
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>Urban Land Ceiling and Regulation (ULC)</label>
+												<input placeholder="" autocomplete="none" type="file" class="form-control">
+												<a href="#">View Preview</a>
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>Development Agreement</label>
+												<input placeholder="" autocomplete="none" type="file" class="form-control">
+												<a href="#">View Preview</a>
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>Title certificate</label>
+												<input placeholder="" autocomplete="none" type="file" class="form-control">
+												<a href="#">View Preview</a>
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>Search report</label>
+												<input placeholder="" autocomplete="none" type="file" class="form-control">
+												<a href="#">View Preview</a>
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>Property Card</label>
+												<input placeholder="" autocomplete="none" type="file" class="form-control">
+												<a href="#">View Preview</a>
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>Statement (7/12)</label>
+												<input placeholder="" autocomplete="none" type="file" class="form-control">
+												<a href="#">View Preview</a>
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>NA Order (Non Agriculture Order)</label>
+												<input placeholder="" autocomplete="none" type="file" class="form-control">
+												<a href="#">View Preview</a>
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>Fire NOC</label>
+												<input placeholder="" autocomplete="none" type="file" class="form-control">
+												<a href="#">View Preview</a>
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>Location Plan</label>
+												<input placeholder="" autocomplete="none" type="file" class="form-control">
+												<a href="#">View Preview</a>
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>Floor Plan</label>
+												<input placeholder="" autocomplete="none" type="file" class="form-control">
+												<a href="#">View Preview</a>
+											</div>
+										</div>
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>OC Approval Plan</label>
+												<input placeholder="" autocomplete="none" type="file" class="form-control">
+												<a href="#">View Preview</a>
+											</div>
+										</div>
+
+										
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>Property Tax Bill</label>
+												<input placeholder="" autocomplete="none" type="file" class="form-control">
+												<a href="#">View Preview</a>
+											</div>
+										</div>
+
+
+										<div class="col-md-3">
+											<div class="form-group">
+												<label>Water Bill</label>
+												<input placeholder="" autocomplete="none" type="file" class="form-control">
+												<a href="#">View Preview</a>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+							<br>
+							<button class="btn btn-secondary pull-right mr-1" type="button" awPreviousStep>Previous</button>
+							<button class="btn btn-success pull-right" type="button">Finish</button>
+						</aw-wizard-completion-step>
+
+						<!-- <aw-wizard-completion-step stepTitle="Step 4" awEnableBackLinks>
+						</aw-wizard-completion-step> -->
+					</aw-wizard>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+					
+
+					
+					

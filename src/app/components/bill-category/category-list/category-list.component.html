@@ -1,0 +1,149 @@
+<!-- breadcrumb -->
+<div class="breadcrumb-header justify-content-between">
+    <div class="my-auto">
+        <div class="d-flex">
+            <h4 class="content-title mb-0 my-auto">Dashboard</h4><span class="text-muted mt-1 tx-13 ml-2 mb-0">/ Bill Category</span>
+        </div>
+    </div>
+    <div class="d-flex my-xl-auto right-content mr-2">
+        <!-- <div class="pr-1 mb-3 mb-xl-0">
+            <button type="button" class="btn btn-warning  btn-icon mr-2"><i class="mdi mdi-refresh"></i></button>
+        </div> -->
+        <div class="pr-1 mb-3 mb-xl-0">
+			<button type="button" (click)="Select2Open(select2Modal)" placement="bottom" class="btn btn-info btn-icon mr-2"  ngbTooltip="Create New Category" >
+                <i class="fa fa-plus"></i>
+            </button>
+		</div>
+    </div>
+</div>
+<!-- breadcrumb -->
+
+
+<ng-template #select2Modal let-modal>
+	<div class="modal-header">
+		<h6 class="modal-title">Create New Category</h6>
+		<button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	<div class="modal-body">
+		<div class="row">
+            <div class="col-sm-12 col-md-12">
+                <div class="form-group">
+					<input type="text" class="form-control" placeholder="Category Name"/>
+				</div>
+            </div>
+            <!-- <div class="col-sm-12 col-md-12">
+                <div class="form-group">
+					<input type="text" class="form-control" placeholder="Category Nick Name"/>
+				</div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+                <div class="form-group">
+					<select class="form-control">
+                        <option value="">Select Account</option>
+                        <option value="Maintenance">Maintenance</option>
+                        <option value="Common Eletricity Charges">Common Eletricity Charges</option>
+                        <option value="Water Charges">Water Charges</option>
+                    </select>
+				</div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+                <div class="form-group">
+					<input type="text" class="form-control" placeholder="Amount"/>
+				</div>
+            </div> -->
+            <div class="col-md-12">
+                <div class="form-group">
+                    <button class="btn btn-info-gradient btn-rounded btn-block">Submit</button>
+                </div>
+            </div>
+        </div>
+		
+	</div>
+	<div class="modal-footer ">
+		<button type="button" class="btn ripple btn-secondary" (click)="modal.close('Save click')">Close</button>
+	</div>
+</ng-template>
+<div class="row row-cards row-deck">
+    <div class="col-sm-12 col-lg-3" style="cursor: pointer;" routerLink="category-head/">
+        <div class="card">
+            <div class="card-header pb-0">
+                <div class="card-title pb-0 tx-12  mb-3">Maintenance</div>
+                <p class="tx-12 tx-gray-500 mb-3">Created on : 09-03-2022 10:30 AM</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-lg-3" style="cursor: pointer;"  routerLink="category-head/">
+        <div class="card">
+            <div class="card-header pb-0">
+                <div class="card-title pb-0 tx-12  mb-3">Major Repair Bill</div>
+                <p class="tx-12 tx-gray-500 mb-3">Created on : 09-03-2022 10:30 AM</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-lg-3" style="cursor: pointer;"  routerLink="category-head/">
+        <div class="card">
+            <div class="card-header pb-0">
+                <div class="card-title pb-0 tx-12  mb-3">Club House / Activity</div>
+                <p class="tx-12 tx-gray-500 mb-3">Created on : 09-03-2022 10:30 AM</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-lg-3" style="cursor: pointer;"  routerLink="category-head/">
+        <div class="card">
+            <div class="card-header pb-0">
+                <div class="card-title pb-0 tx-12  mb-3">Cultural / Pooja Charges</div>
+                <p class="tx-12 tx-gray-500 mb-3">Created on : 09-03-2022 10:30 AM</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- row -->
+<!-- <div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                
+                <table class="table table-bordered" id="">
+                    <thead>
+                        <tr>
+                            <th>Category Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a routerLink="category-head/">
+                                    Category Name 1
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a routerLink="category-head/">
+                                    Category Name 2
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a routerLink="category-head/">
+                                    Category Name 3
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a routerLink="/category-head/">
+                                    Category Name 4
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- row closed -->

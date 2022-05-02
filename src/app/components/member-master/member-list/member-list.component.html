@@ -1,0 +1,258 @@
+<!-- breadcrumb -->
+<div class="breadcrumb-header justify-content-between">
+    <div class="my-auto">
+		<div class="d-flex">
+			<h4 class="content-title mb-0 my-auto">Dashboard</h4>
+            <span class="text-muted mt-1 tx-13 ml-2 mb-0">/ Member Master</span>
+		</div>
+	</div>
+    <div class="d-flex my-xl-auto right-content mr-2">
+        <div class="pr-1 mb-3 mb-xl-0">
+			<a type="button" placement="bottom" ngbTooltip="Download CSV" class="btn btn-danger btn-icon mr-2">
+                <i class="fa fa-upload"></i>
+            </a>
+		</div>
+		<div class="pr-1 mb-3 mb-xl-0">
+			<button type="button" (click)="Select2Open(select2Modal)" placement="bottom" class="btn btn-info btn-icon mr-2"  ngbTooltip="Bulk Upload" >
+                <i class="fa fa-list-alt"></i>
+            </button>
+		</div>
+		<div class="pr-1 mb-3 mb-xl-0">
+			<a routerLink="./new-member/" type="button" placement="bottom"  ngbTooltip="New Member" class="btn btn-danger btn-icon mr-2">
+                <i class="fa fa-user-plus"></i>
+            </a>
+		</div>
+		<!-- <div class="pr-1 mb-3 mb-xl-0">
+			<button type="button" class="btn btn-warning btn-icon mr-2">
+                <i class="mdi mdi-refresh"></i>
+            </button>
+		</div> -->
+	</div>
+</div>
+<ng-template #select2Modal let-modal>
+	<div class="modal-header">
+		<h6 class="modal-title">Bulk Upload</h6>
+		<button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	<div class="modal-body">
+		<div class="row">
+            <div class="col-sm-12 col-md-12 mg-t-10 mg-sm-t-0" style="padding-bottom: 20px;">
+                <label>Choose CSV File to Upload</label>
+                <div class="dropzone dropzone-primary" [dropzone]="config2">
+                    <div class="dz-message needsclick">
+                        <i class="fe fe-upload-cloud" aria-hidden="true"></i>
+                        <h6>Drop files here or click to upload files.</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <button class="btn btn-info-gradient btn-rounded btn-block">Upload</button>
+                </div>
+            </div>
+        </div>
+		
+	</div>
+	<div class="modal-footer ">
+		<button type="button" class="btn ripple btn-secondary" (click)="modal.close('Save click')">Close</button>
+	</div>
+</ng-template>
+
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table" id="myTable1">
+                        <thead>
+                            <tr>
+                                <th class="wd-lg-8p"><span>Type</span></th>
+                                <th class="wd-lg-10p"><span>Flat No</span></th>
+                                <th class="wd-lg-8p"><span>Wing</span></th>
+                                <th class="wd-lg-30p"><span>Member Name</span></th>
+                                <th class="wd-lg-10p"><span>Approved By</span></th>
+                                <th class="wd-lg-12p"><span>Approved On</span></th>
+                                <th class="wd-lg-10p"><span>Channel</span></th>
+                                <th class="wd-lg-10p">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <!-- <span class="label text-muted d-flex"><div class="dot-label bg-gray-300 mr-1"></div>Inactive</span> -->
+                                    OWNER
+                                </td>
+                                <td>
+                                    0567
+                                 </td>
+                                 
+                                 <td>
+                                     Office
+                                 </td>
+                                <td>
+                                    Megan Peters
+                                </td>
+                                
+                                <td>
+                                    
+                                </td>
+
+                                <td>
+                                    31 December, 2021
+                                </td>
+
+                                <td>
+                                    WEB
+                                </td>
+
+                                <td>
+                                    <a href="javascript:;" routerLink="./update-member" class="btn btn-sm btn-info">
+                                        <i class="las la-pen"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <!-- <span class="label text-muted d-flex"><div class="dot-label bg-gray-300 mr-1"></div>Inactive</span> -->
+                                    OWNER
+                                </td>
+                                <td>
+                                    0567
+                                 </td>
+                                 
+                                 <td>
+                                     Office
+                                 </td>
+                                <td>
+                                    Megan Peters
+                                </td>
+                                
+                                <td>
+                                    
+                                </td>
+
+                                <td>
+                                    31 December, 2021
+                                </td>
+
+                                <td>
+                                    WEB
+                                </td>
+
+                                <td>
+                                    <a href="javascript:;" routerLink="./update-member" class="btn btn-sm btn-info">
+                                        <i class="las la-pen"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <!-- <span class="label text-muted d-flex"><div class="dot-label bg-gray-300 mr-1"></div>Inactive</span> -->
+                                    OWNER
+                                </td>
+                                <td>
+                                    0567
+                                 </td>
+                                 
+                                 <td>
+                                     Office
+                                 </td>
+                                <td>
+                                    Megan Peters
+                                </td>
+                                
+                                <td>
+                                    
+                                </td>
+
+                                <td>
+                                    31 December, 2021
+                                </td>
+
+                                <td>
+                                    WEB
+                                </td>
+
+                                <td>
+                                    <a href="javascript:;" routerLink="./update-member" class="btn btn-sm btn-info">
+                                        <i class="las la-pen"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <!-- <span class="label text-muted d-flex"><div class="dot-label bg-gray-300 mr-1"></div>Inactive</span> -->
+                                    OWNER
+                                </td>
+                                <td>
+                                    0567
+                                 </td>
+                                 
+                                 <td>
+                                     Office
+                                 </td>
+                                <td>
+                                    Megan Peters
+                                </td>
+                                
+                                <td>
+                                    
+                                </td>
+
+                                <td>
+                                    31 December, 2021
+                                </td>
+
+                                <td>
+                                    WEB
+                                </td>
+
+                                <td>
+                                    <a href="javascript:;" routerLink="./update-member" class="btn btn-sm btn-info">
+                                        <i class="las la-pen"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <!-- <span class="label text-muted d-flex"><div class="dot-label bg-gray-300 mr-1"></div>Inactive</span> -->
+                                    OWNER
+                                </td>
+                                <td>
+                                    0567
+                                 </td>
+                                 
+                                 <td>
+                                     Office
+                                 </td>
+                                <td>
+                                    Megan Peters
+                                </td>
+                                
+                                <td>
+                                    
+                                </td>
+
+                                <td>
+                                    31 December, 2021
+                                </td>
+
+                                <td>
+                                    WEB
+                                </td>
+
+                                <td>
+                                    <a href="javascript:;" routerLink="./update-member" class="btn btn-sm btn-info">
+                                        <i class="las la-pen"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,148 @@
+<!-- breadcrumb -->
+<div class="breadcrumb-header justify-content-between">
+    <div class="my-auto">
+        <div class="d-flex">
+            <h4 class="content-title mb-0 my-auto">Dashboard</h4><span class="text-muted mt-1 tx-13 ml-2 mb-0">/ Account Master</span>
+        </div>
+    </div>
+    <div class="d-flex my-xl-auto right-content mr-2">
+        <div class="pr-1 mb-3 mb-xl-0">
+			<button type="button" (click)="Select2Open(select2Modal)" placement="bottom" class="btn btn-info btn-icon mr-2"  ngbTooltip="Create New" >
+                <i class="fa fa-plus"></i>
+            </button>
+		</div>
+        <!-- <div class="pr-1 mb-3 mb-xl-0">
+            <button type="button" class="btn btn-warning  btn-icon mr-2"><i class="mdi mdi-refresh"></i></button>
+        </div> -->
+    </div>
+</div>
+<!-- breadcrumb -->
+
+<ng-template #select2Modal let-modal>
+	<div class="modal-header">
+		<h6 class="modal-title">Create New Secondary Group</h6>
+		<button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	<div class="modal-body">
+		<div class="row">
+            <div class="col-sm-12 col-md-12">
+                <div class="form-group">
+					<select class="form-control">
+                        <option value="">Select Group</option>
+                        <option value="Income">Income</option>
+                        <option value="Expenditure">Expenditure</option>
+                        <option value="Asset">Asset</option>
+                        <option value="Liability">Liability</option>
+                    </select>
+				</div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+                <div class="form-group">
+					<select class="form-control">
+                        <option value="">Select Primary Group</option>
+                        <option value="Cost of Land">Income</option>
+                        <option value="Cash & Bank Balance">Expenditure</option>
+                        <option value="Investment">Asset</option>
+                    </select>
+				</div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+                <div class="form-group">
+					<select class="form-control">
+                        <option value="">Select Charges Type</option>
+                        <option value="">All</option>
+                        <option value="">Fixed</option>
+                        <option value="">Variable</option>
+                    </select>
+				</div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+                <div class="form-group">
+					<input type="text" class="form-control" placeholder="Secondary Account Name"/>
+				</div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+                <div class="form-group">
+					<input type="text" class="form-control" placeholder="Charges"/>
+				</div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <button class="btn btn-info-gradient btn-rounded btn-block">Submit</button>
+                </div>
+            </div>
+        </div>
+		
+	</div>
+	<div class="modal-footer ">
+		<button type="button" class="btn ripple btn-secondary" (click)="modal.close('Save click')">Close</button>
+	</div>
+</ng-template>
+
+<!-- row -->
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <table class="table table-bordered" id="myTable1">
+                    <thead>
+                        <tr>
+                            <th class="wd-lg-8p">Group</th>
+                            <th class="wd-lg-8p">Primary Group</th>
+                            <th class="wd-lg-8p">Main Group</th>
+                            <th class="wd-lg-8p">Charge Type</th>
+                            <th class="wd-lg-8p">Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cost of Land</td>
+                            <td>Cost of Land</td>
+                            <td>Assets</td>
+                            <td>Fixed</td>
+                            <td>100.00</td>
+                        </tr>
+                        <tr>
+                            <td>Cash & Bank Balance</td>
+                            <td>Cash & Bank Balance</td>
+                            <td>Assets</td>
+                            <td>Fixed</td>
+                            <td>100.00</td>
+                        </tr>
+                        <tr>
+                            <td>Investments</td>
+                            <td>Investments</td>
+                            <td>Assets</td>
+                            <td>Fixed</td>
+                            <td>100.00</td>
+                        </tr>
+                        <tr>
+                            <td>Sundry Debtors</td>
+                            <td>Sundry Debtors</td>
+                            <td>Assets</td>
+                            <td>Fixed</td>
+                            <td>100.00</td>
+                        </tr>
+                        <tr>
+                            <td>Dues from Members</td>
+                            <td>Dues from Members</td>
+                            <td>Assets</td>
+                            <td>Fixed</td>
+                            <td>100.00</td>
+                        </tr>
+                        <tr>
+                            <td>Fixed Assets</td>
+                            <td>Fixed Assets</td>
+                            <td>Assets</td>
+                            <td>Fixed</td>
+                            <td>100.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- row closed -->

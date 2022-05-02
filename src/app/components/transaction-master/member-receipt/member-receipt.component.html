@@ -1,0 +1,610 @@
+<!-- breadcrumb -->
+<div class="breadcrumb-header justify-content-between">
+  <div class="my-auto">
+    <div class="d-flex">
+      <h4 class="content-title mb-0 my-auto">Dashboard</h4>
+      <span class="text-muted mt-1 tx-13 ml-2 mb-0">/ Member Receipt</span>
+    </div>
+  </div>
+  <div class="d-flex my-xl-auto center-content mr-2">
+    <div class="col-sm-2">
+      <button
+        type="button"
+        (click)="Select2Open(select2Modal)"
+        style="margin-top: 12px"
+        class="btn btn-info-gradient btn-rounded btn-block"
+        ngbTooltip="Add New Entry"
+      >
+        Add
+      </button>
+    </div>
+
+    <div class="col-sm-2">
+      <button
+        style="margin-top: 12px"
+        class="btn btn-success-gradient btn-rounded btn-block"
+      >
+        Alter
+      </button>
+    </div>
+
+    <div class="col-sm-2">
+      <button
+        style="margin-top: 12px"
+        class="btn btn-primary-gradient btn-rounded btn-block"
+      >
+        Delete
+      </button>
+    </div>
+
+    <div class="col-sm-4">
+      <button
+        style="margin-top: 12px"
+        class="btn btn-danger-gradient btn-rounded btn-block"
+      >
+        Print Register
+      </button>
+    </div>
+
+    <div class="col-sm-4">
+      <button
+        style="margin-top: 12px"
+        class="btn btn-warning-gradient btn-rounded btn-block"
+      >
+        Print Receipt
+      </button>
+    </div>
+
+    <!-- **************MAKING MODAL*********** -->
+    <ng-template #select2Modal let-modal>
+      <div class="modal-header">
+        <h6 class="modal-title">Create New Entry</h6>
+        <button
+          type="button"
+          class="close"
+          aria-label="Close"
+          (click)="modal.dismiss('Cross click')"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-sm-12 col-md-12">
+            <h4>Member Balance</h4>
+
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <p>Principal:</p>
+
+                  <input
+                    type="number"
+                    class="form-control"
+                    placeholder="Principal"
+                  />
+                </div>
+                <div class="col">
+                  <p>Interest:</p>
+
+                  <input
+                    type="number"
+                    class="form-control"
+                    placeholder="Interest"
+                  />
+                </div>
+                <div class="col">
+                  <p>Total Dues:</p>
+
+                  <input
+                    type="number"
+                    class="form-control"
+                    placeholder="Total Dues"
+                  />
+                </div>
+              </div>
+            </div>
+            <br />
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <p>No:</p>
+
+                  <input type="number" class="form-control" placeholder="No." />
+                </div>
+                <div class="col">
+                  <p>Enter the date:</p>
+                  <input
+                    type="date"
+                    class="form-control"
+                    placeholder="Enter the Date"
+                  />
+                </div>
+              </div>
+            </div>
+            <br />
+
+            <div class="container">
+              <div class="row justify-content-md-left">
+                <div class="col col-lg-6">
+                  <p>(Cr.) Member</p>
+                  <select class="form-control">
+                    <option value=""></option>
+                    <option value="Cash"></option>
+                    <option value="Bank"></option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <br />
+
+            <div class="form-group">
+              <select class="form-control">
+                <option value="">Select Account type</option>
+                <option value="Cash">Cash</option>
+                <option value="Bank">Bank</option>
+
+                <option value="ledger">Other ledger</option>
+              </select>
+            </div>
+
+            <br />
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <p>Cheque No:</p>
+
+                  <input
+                    type="number"
+                    class="form-control"
+                    placeholder="Cheque No."
+                  />
+                </div>
+                <div class="col">
+                  <p>Cheque date:</p>
+
+                  <input
+                    type="date"
+                    class="form-control"
+                    placeholder="cheque Date"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <p>Drawn on:</p>
+
+              <input type="date" class="form-control" placeholder="Drawn On" />
+            </div>
+            <div class="form-group">
+              <p>Against:</p>
+
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Enter Name"
+              />
+            </div>
+            <div class="form-group">
+              <p>Particular:</p>
+
+              <input type="text" class="form-control" placeholder="" />
+              <input type="text" class="form-control" placeholder="" />
+            </div>
+
+            <div class="container">
+              <div class="row">
+                <div class="col">
+                  <p>Amount:</p>
+
+                  <input
+                    type="number"
+                    class="form-control"
+                    placeholder="Enter amount in ₹"
+                  />
+                </div>
+                <div class="col" style="background-color: #f5f5f5">
+                  <h4>Interest Bifurcation</h4>
+                  <p>Enter Principal:</p>
+
+                  <input
+                    type="number"
+                    class="form-control"
+                    placeholder="Principal"
+                  />
+                  <p>Enter Interest:</p>
+
+                  <input
+                    type="number"
+                    class="form-control"
+                    placeholder="Interest"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <br />
+
+          <div class="col-md-12">
+            <div class="form-group">
+              <button
+                style="margin-top: 15px"
+                class="btn btn-info-gradient btn-rounded btn-block"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn ripple btn-secondary"
+          (click)="modal.close('Save click')"
+        >
+          Close
+        </button>
+      </div>
+    </ng-template>
+    <!-- <div class="pr-1 mb-3 mb-xl-0">
+        <button type="button" placement="bottom" class="btn btn-info btn-icon mr-2"  ngbTooltip="Generate Bill" >
+            <i class="fa fa-address-card"></i>
+        </button>
+    </div>
+    <div class="pr-1 mb-3 mb-xl-0">
+        <button type="button" placement="bottom" class="btn btn-info btn-icon mr-2"  ngbTooltip="Add New" >
+            <i class="fa fa-user-plus"></i>
+        </button>
+    </div> -->
+  </div>
+  <div class="d-flex my-xl-auto right-content mr-2">
+    <!-- <div class="pr-1 mb-3 mb-xl-0">
+            <button type="button" class="btn btn-warning  btn-icon mr-2"><i class="mdi mdi-refresh"></i></button>
+        </div> -->
+  </div>
+</div>
+<!-- breadcrumb -->
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="main-content-label mg-b-5">Filter / Sort Options</div>
+        <br />
+        <!-- <div class="row">
+          <div class="col-md-3">asdas</div>
+          <div class="col-md-3">asdas</div>
+        </div> -->
+        <br />
+        <table class="table table-bordered" id="myTable1">
+          <thead>
+            <tr>
+              <th class="wd-lg-8p">Check Box</th>
+
+              <th class="wd-lg-8p">No.</th>
+              <th class="wd-lg-8p">Date</th>
+              <th class="wd-lg-8p">Cash/Bank</th>
+              <th class="wd-lg-8p">Flat no.</th>
+              <th class="wd-lg-8p">Mem. Name</th>
+              <th class="wd-lg-8p">Amount</th>
+              <th class="wd-lg-8p">Chq. No.</th>
+              <th class="wd-lg-8p">Chq. Date</th>
+              <th class="wd-lg-8p">Bank</th>
+              <th class="wd-lg-8p">Bill no.</th>
+              <th class="wd-lg-8p">Pt 1</th>
+              <th class="wd-lg-8p">Pt 2</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <input type="checkbox" id="id1" value="id1" />
+              </td>
+              <td>1</td>
+              <td>15/04/2022</td>
+              <td>The Saraswat Bank A/C3352001000</td>
+              <td>L/303</td>
+              <td>Mr. RAJENDRA CHAVAN</td>
+              <td>3,016.00</td>
+              <td>437924</td>
+              <td>14/04/2022</td>
+              <td>CANARA BANK</td>
+              <td>Bill no. 163-Date:14/04/2022</td>
+            </tr>
+
+            <tr>
+              <td>
+                <input type="checkbox" id="id2" value="id2" />
+              </td>
+              <td>2</td>
+              <td>15/04/2022</td>
+              <td>The Saraswat Bank A/C3352001000</td>
+              <td>L/802</td>
+              <td>Mr. HARISHANKAR SHIVPRASAD</td>
+              <td>3,000.00</td>
+              <td>197918</td>
+              <td>07/04/2022</td>
+              <td>STATE BANK OF INDIA</td>
+              <td>Bill no. 182-Date:14/04/2022</td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="id3" value="id3" />
+              </td>
+              <td>3</td>
+              <td>15/04/2022</td>
+              <td>The Saraswat Bank A/C3352001000</td>
+              <td>L/803</td>
+              <td>Mr. CHANDRAKANT S. SAWANT</td>
+              <td>3,000.00</td>
+              <td>183792</td>
+              <td>20/04/2022</td>
+              <td>SVC CO-OP BANK</td>
+              <td>Bill no. 120-Date:14/04/2022</td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="id4" value="id4" />
+              </td>
+              <td>4</td>
+              <td>15/04/2022</td>
+              <td>The Saraswat Bank A/C3352001000</td>
+              <td>L/502</td>
+              <td>Mr. KAMAL KUMAR</td>
+              <td>3,000.00</td>
+              <td>178954</td>
+              <td>10/04/2022</td>
+              <td>STATE BANK OF INDIA</td>
+              <td>Bill no. 125-Date:14/04/2022</td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="id5" value="id5" />
+              </td>
+              <td>5</td>
+              <td>15/04/2022</td>
+              <td>The Saraswat Bank A/C3352001000</td>
+              <td>L/204</td>
+              <td>Mr. PRAKASH N. KALE</td>
+              <td>3,000.00</td>
+              <td>193269</td>
+              <td>10/04/2022</td>
+              <td>CANARA BANK</td>
+              <td>Bill no. 132-Date:14/04/2022</td>
+            </tr>
+
+            <tr>
+              <td>
+                <input type="checkbox" id="id6" value="id6" />
+              </td>
+              <td>6</td>
+              <td>15/04/2022</td>
+              <td>The Saraswat Bank A/C3352001000</td>
+              <td>L/303</td>
+              <td>Mr. RAJENDRA CHAVAN</td>
+              <td>3,016.00</td>
+              <td>437924</td>
+              <td>14/04/2022</td>
+              <td>CANARA BANK</td>
+              <td>Bill no. 163-Date:14/04/2022</td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="id7" value="id7" />
+              </td>
+              <td>7</td>
+              <td>15/04/2022</td>
+              <td>The Saraswat Bank A/C3352001000</td>
+              <td>L/802</td>
+              <td>Mr. HARISHANKAR SHIVPRASAD</td>
+              <td>3,000.00</td>
+              <td>197918</td>
+              <td>07/04/2022</td>
+              <td>STATE BANK OF INDIA</td>
+              <td>Bill no. 182-Date:14/04/2022</td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="id8" value="id8" />
+              </td>
+              <td>8</td>
+              <td>15/04/2022</td>
+              <td>The Saraswat Bank A/C3352001000</td>
+              <td>L/803</td>
+              <td>Mr. CHANDRAKANT S. SAWANT</td>
+              <td>3,000.00</td>
+              <td>183792</td>
+              <td>20/04/2022</td>
+              <td>SVC CO-OP BANK</td>
+              <td>Bill no. 120-Date:14/04/2022</td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="id9" value="id9" />
+              </td>
+              <td>9</td>
+              <td>15/04/2022</td>
+              <td>The Saraswat Bank A/C3352001000</td>
+              <td>L/502</td>
+              <td>Mr. KAMAL KUMAR</td>
+              <td>3,000.00</td>
+              <td>178954</td>
+              <td>10/04/2022</td>
+              <td>STATE BANK OF INDIA</td>
+              <td>Bill no. 125-Date:14/04/2022</td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="id10" value="id10" />
+              </td>
+              <td>10</td>
+              <td>15/04/2022</td>
+              <td>The Saraswat Bank A/C3352001000</td>
+              <td>L/204</td>
+              <td>Mr. PRAKASH N. KALE</td>
+              <td>3,000.00</td>
+              <td>193269</td>
+              <td>10/04/2022</td>
+              <td>CANARA BANK</td>
+              <td>Bill no. 132-Date:14/04/2022</td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="id11" value="id11" />
+              </td>
+              <td>11</td>
+              <td>15/04/2022</td>
+              <td>The Saraswat Bank A/C3352001000</td>
+              <td>L/303</td>
+              <td>Mr. RAJENDRA CHAVAN</td>
+              <td>3,016.00</td>
+              <td>437924</td>
+              <td>14/04/2022</td>
+              <td>CANARA BANK</td>
+              <td>Bill no. 163-Date:14/04/2022</td>
+            </tr>
+
+            <tr>
+              <td>
+                <input type="checkbox" id="id12" value="id12" />
+              </td>
+              <td>12</td>
+              <td>15/04/2022</td>
+              <td>The Saraswat Bank A/C3352001000</td>
+              <td>L/802</td>
+              <td>Mr. HARISHANKAR SHIVPRASAD</td>
+              <td>3,000.00</td>
+              <td>197918</td>
+              <td>07/04/2022</td>
+              <td>STATE BANK OF INDIA</td>
+              <td>Bill no. 182-Date:14/04/2022</td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="id13" value="id13" />
+              </td>
+              <td>13</td>
+              <td>15/04/2022</td>
+              <td>The Saraswat Bank A/C3352001000</td>
+              <td>L/803</td>
+              <td>Mr. CHANDRAKANT S. SAWANT</td>
+              <td>3,000.00</td>
+              <td>183792</td>
+              <td>20/04/2022</td>
+              <td>SVC CO-OP BANK</td>
+              <td>Bill no. 120-Date:14/04/2022</td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="id14" value="id14" />
+              </td>
+              <td>14</td>
+              <td>15/04/2022</td>
+              <td>The Saraswat Bank A/C3352001000</td>
+              <td>L/502</td>
+              <td>Mr. KAMAL KUMAR</td>
+              <td>3,000.00</td>
+              <td>178954</td>
+              <td>10/04/2022</td>
+              <td>STATE BANK OF INDIA</td>
+              <td>Bill no. 125-Date:14/04/2022</td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="id15" value="id15" />
+              </td>
+              <td>15</td>
+              <td>15/04/2022</td>
+              <td>The Saraswat Bank A/C3352001000</td>
+              <td>L/204</td>
+              <td>Mr. PRAKASH N. KALE</td>
+              <td>3,000.00</td>
+              <td>193269</td>
+              <td>10/04/2022</td>
+              <td>CANARA BANK</td>
+              <td>Bill no. 132-Date:14/04/2022</td>
+            </tr>
+
+            <tr>
+              <td>
+                <input type="checkbox" id="id16" value="id16" />
+              </td>
+              <td>16</td>
+              <td>15/04/2022</td>
+              <td>The Saraswat Bank A/C3352001000</td>
+              <td>L/303</td>
+              <td>Mr. RAJENDRA CHAVAN</td>
+              <td>3,016.00</td>
+              <td>437924</td>
+              <td>14/04/2022</td>
+              <td>CANARA BANK</td>
+              <td>Bill no. 163-Date:14/04/2022</td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="id17" value="id17" />
+              </td>
+              <td>17</td>
+              <td>15/04/2022</td>
+              <td>The Saraswat Bank A/C3352001000</td>
+              <td>L/802</td>
+              <td>Mr. HARISHANKAR SHIVPRASAD</td>
+              <td>3,000.00</td>
+              <td>197918</td>
+              <td>07/04/2022</td>
+              <td>STATE BANK OF INDIA</td>
+              <td>Bill no. 182-Date:14/04/2022</td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="id18" value="id18" />
+              </td>
+              <td>18</td>
+              <td>15/04/2022</td>
+              <td>The Saraswat Bank A/C3352001000</td>
+              <td>L/803</td>
+              <td>Mr. CHANDRAKANT S. SAWANT</td>
+              <td>3,000.00</td>
+              <td>183792</td>
+              <td>20/04/2022</td>
+              <td>SVC CO-OP BANK</td>
+              <td>Bill no. 120-Date:14/04/2022</td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="id19" value="id19" />
+              </td>
+              <td>19</td>
+              <td>15/04/2022</td>
+              <td>The Saraswat Bank A/C3352001000</td>
+              <td>L/502</td>
+              <td>Mr. KAMAL KUMAR</td>
+              <td>3,000.00</td>
+              <td>178954</td>
+              <td>10/04/2022</td>
+              <td>STATE BANK OF INDIA</td>
+              <td>Bill no. 125-Date:14/04/2022</td>
+            </tr>
+            <tr>
+              <td>
+                <input type="checkbox" id="id20" value="id20" />
+              </td>
+              <td>20</td>
+              <td>15/04/2022</td>
+              <td>The Saraswat Bank A/C3352001000</td>
+              <td>L/204</td>
+              <td>Mr. PRAKASH N. KALE</td>
+              <td>3,000.00</td>
+              <td>193269</td>
+              <td>10/04/2022</td>
+              <td>CANARA BANK</td>
+              <td>Bill no. 132-Date:14/04/2022</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,126 @@
+<!-- breadcrumb -->
+<div class="breadcrumb-header justify-content-between">
+    <div class="my-auto">
+        <div class="d-flex">
+            <h4 class="content-title mb-0 my-auto">Announcement Master</h4>
+        </div>
+    </div>
+    <div class="d-flex my-xl-auto right-content mr-2">
+        <div class="pr-1 mb-3 mb-xl-0">
+			<button type="button" (click)="Select2Open(select2Modal)" placement="bottom" class="btn btn-info btn-icon mr-2"  ngbTooltip="Create New Announcement" >
+                <i class="fa fa-user-plus"></i>
+            </button>
+		</div>
+    </div>
+</div>
+<!-- breadcrumb -->
+
+<ng-template #select2Modal let-modal>
+	<div class="modal-header">
+		<h6 class="modal-title">Create New Announcement</h6>
+		<button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	<div class="modal-body">
+		<div class="row">
+            <div class="col-sm-6 col-md-6">
+                <div class="form-group">
+					<input type="text" class="form-control" placeholder="Notification Title"/>
+				</div>
+            </div>
+            <div class="col-sm-6 col-md-6">
+                <div class="form-group">
+					<select class="form-control">
+                        <option value="">Select Notification Type</option>
+                        <option value="Event">Event</option>
+                        <option value="Meeting">Meeting</option>
+                        <option value="Celebration">Celebration</option>
+                        <option value="Offer">Offer</option>
+                    </select>
+				</div>
+            </div>
+            <div class="col-sm-6 col-md-6">
+                <div class="form-group">
+					<select class="form-control">
+                        <option value="">Select Venue</option>
+                        <option value="Basement">Basement</option>
+                        <option value="Terrace">Terrace</option>
+                        <option value="Club Area">Club Area</option>
+                        <option value="Open Area">Open Area</option>
+                        <option value="Garden Area">Garden Area</option>
+                        <option value="Others">Others</option>
+                    </select>
+				</div>
+            </div>
+            <div class="col-sm-6 col-md-6">
+                <div class="form-group">
+					<input type="text" class="form-control" placeholder="Start Date and Time"/>
+				</div>
+            </div>
+            <div class="col-sm-6 col-md-6">
+                <div class="form-group">
+					<input type="text" class="form-control" placeholder="End Date and Time"/>
+				</div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+                <div class="form-group">
+					<textarea type="text" class="form-control" placeholder="Notification Description"></textarea>
+				</div>
+            </div>
+            <div class="col-sm-12 col-md-12 mg-t-10 mg-sm-t-0" style="padding-bottom: 20px;">
+                <label>Choose File to Upload</label>
+                <div class="dropzone dropzone-primary" [dropzone]="config2">
+                    <div class="dz-message needsclick">
+                        <i class="fe fe-upload-cloud" aria-hidden="true"></i>
+                        <h6>UPload files here or click to upload files.</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <button class="btn btn-info-gradient btn-rounded btn-block">Save</button>
+                </div>
+            </div>
+        </div>
+		
+	</div>
+	<div class="modal-footer ">
+		<button type="button" class="btn ripple btn-secondary" (click)="modal.close('Save click')">Close</button>
+	</div>
+</ng-template>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover" id="myTable1">
+                        <thead>
+                            <tr>
+                                <th class="wd-lg-8p">Title</th>
+                                <th class="wd-lg-8p">Type</th>
+                                <th class="wd-lg-8p">Venue</th>
+                                <th class="wd-lg-8p">Approved By</th>
+                                <th class="wd-lg-8p">Approved On</th>
+                                <th class="wd-lg-8p">Purpose</th>
+                                <th class="wd-lg-8p">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

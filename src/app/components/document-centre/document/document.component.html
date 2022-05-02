@@ -1,0 +1,106 @@
+<!-- breadcrumb -->
+<div class="breadcrumb-header justify-content-between">
+    <div class="my-auto">
+		<div class="d-flex">
+			<h4 class="content-title mb-0 my-auto">Dashboard</h4>
+            <span class="text-muted mt-1 tx-13 ml-2 mb-0">/ Document Center</span>
+		</div>
+	</div>
+    <div class="d-flex my-xl-auto right-content mr-2">
+		<div class="pr-1 mb-3 mb-xl-0">
+			<button type="button" (click)="Select2Open(select2Modal)" placement="bottom" class="btn btn-info btn-icon mr-2"  ngbTooltip="New Document" >
+                <i class="fa fa-user-plus"></i>
+            </button>
+		</div>
+	</div>
+</div>
+<ng-template #select2Modal let-modal>
+	<div class="modal-header">
+		<h6 class="modal-title">New Document</h6>
+		<button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	<div class="modal-body">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Document Title"/>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="form-group">
+					<textarea class="form-control" rows="4" placeholder="Description here..."></textarea>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="form-group">
+					<div class="checkbox">
+						<div class="custom-checkbox custom-control">
+							<input type="checkbox" data-checkboxes="mygroup" class="custom-control-input"
+								id="checkbox-2">
+							<label for="checkbox-2" class="custom-control-label mt-1">Expire File</label>
+						</div>
+					</div>
+				</div>
+			</div>
+            <div class="col-sm-12 col-md-12 mg-t-10 mg-sm-t-0" style="padding-bottom: 20px;">
+                <label>Choose File to Upload</label>
+                <div class="dropzone dropzone-primary" [dropzone]="config2">
+                    <div class="dz-message needsclick">
+                        <i class="fe fe-upload-cloud" aria-hidden="true"></i>
+                        <h6>Drop files here or click to upload files.</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <button class="btn btn-info-gradient btn-rounded btn-block">Upload</button>
+                </div>
+            </div>
+        </div>
+		
+	</div>
+	<div class="modal-footer ">
+		<button type="button" class="btn ripple btn-secondary" (click)="modal.close('Save click')">Close</button>
+	</div>
+</ng-template>
+
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table" id="myTable1">
+                        <thead>
+                            <tr>
+                                <th class="wd-lg-8p"><span>Title</span></th>
+                                <th class="wd-lg-20p"><span>Expiry</span></th>
+                                <th class="wd-lg-20p"><span>Approved By</span></th>
+                                <th class="wd-lg-20p"><span>Approved On</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <img alt="avatar" class="rounded-circle avatar-md mr-2" src="assets/img/faces/1.jpg">
+									Megan Peters
+                                </td>
+                                <td>
+                                    31 December, 2021
+                                </td>
+
+                                <td>
+                                    Navin Chand Thakur
+                                </td>
+								<td>
+                                    01 January, 2022
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

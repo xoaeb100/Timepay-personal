@@ -1,0 +1,578 @@
+<!-- breadcrumb -->
+<div class="breadcrumb-header justify-content-between">
+    <div class="my-auto">
+        <div class="d-flex">
+            <h4 class="content-title mb-0 my-auto">Maintenance Bill Master</h4>
+        </div>
+    </div>
+    <div class="d-flex my-xl-auto right-content mr-2">
+        <div class="d-flex my-xl-auto right-content mr-2">
+            <div class="pr-1 mb-3 mb-xl-0">
+                <a type="button" placement="bottom" ngbTooltip="Download Format" class="btn btn-danger btn-icon mr-2">
+                    <i class="fa fa-list-alt"></i>
+                </a>
+            </div>
+            <div class="pr-1 mb-3 mb-xl-0">
+                <button type="button" (click)="Select2Open(select2Modal)" placement="bottom" class="btn btn-info btn-icon mr-2"  ngbTooltip="Auto Master Add" >
+                    <i class="fa fa-plus"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- breadcrumb -->
+<ng-template #billingFootNote let-modal>
+	<div class="modal-header">
+		<h6 class="modal-title">Billing Footnote</h6>
+		<button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	<div class="modal-body">
+		<div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <ckeditor [config]="{ placeholder: 'Enter Footer Note Here..' }" [editor]="Editor" data="" skin="moono-lisa" language="en" (ready)="onReady($event)"></ckeditor>	
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <button class="btn btn-info-gradient btn-rounded btn-block">Save</button>
+                </div>
+            </div>
+        </div>
+		
+	</div>
+	<div class="modal-footer ">
+		<button type="button" class="btn ripple btn-secondary" (click)="modal.close('Save click')">Close</button>
+	</div>
+</ng-template>
+
+<ng-template #select2Modal let-modal>
+	<div class="modal-header">
+		<h6 class="modal-title">Auto Master Add</h6>
+		<button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+			<span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	<div class="modal-body">
+		<div class="row">
+            <div class="col-sm-6 col-md-6">
+                <div class="form-group">
+					<input type="text" class="form-control" placeholder="Select Account"/>
+				</div>
+            </div>
+            <div class="col-sm-6 col-md-6">
+                <div class="form-group">
+					<input type="text" class="form-control" placeholder="Charge Name"/>
+				</div>
+            </div>
+            <div class="col-sm-6 col-md-6">
+                <div class="form-group">
+					<input type="text" class="form-control" placeholder="Select Type"/>
+				</div>
+            </div>
+            <div class="col-sm-6 col-md-6">
+                <div class="form-group">
+					<input type="text" class="form-control" placeholder="Fixed / Sq.Ft"/>
+				</div>
+            </div>
+            <div class="col-sm-12 col-md-12">
+                <div class="form-group">
+					<input type="text" class="form-control" placeholder="Amount"/>
+				</div>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <button class="btn btn-info-gradient btn-rounded btn-block">Save</button>
+                </div>
+            </div>
+        </div>
+		
+	</div>
+	<div class="modal-footer ">
+		<button type="button" class="btn ripple btn-secondary" (click)="modal.close('Save click')">Close</button>
+	</div>
+</ng-template>
+
+<!-- row -->
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="text-wrap">
+                    <div class="example">
+                        <div class="panel panel-primary tabs-style-2">
+                            <div class=" tab-menu-heading">
+                                <ul ngbNav #nav1="ngbNav"  class="panel-tabs main-nav-line">
+                                    <li [ngbNavItem]="1">
+                                        <a ngbNavLink>Category Name 1</a>
+                                        <ng-template ngbNavContent>
+                                            <!-- <button style="float: right" type="button" (click)="Select2Open(billingFootNote)" placement="bottom" class="btn btn-info btn-icon mr-2"  ngbTooltip="Create new Pool" >
+                                                <i class="fa fa-user-plus"></i>
+                                            </button> -->
+                                            <div class="table-responsive">
+                                                <table class="table table-bordered table-hover" id="">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="wd-lg-8p">Flat number</th>
+                                                            <th class="wd-lg-8p">Member Name</th>
+                                                            <th class="wd-lg-8p">Area</th>
+                                                            <th class="wd-lg-8p">Charge 1</th>
+                                                            <th class="wd-lg-8p">Charge 2</th>
+                                                            <th class="wd-lg-8p">Charge 3</th>
+                                                            <th class="wd-lg-8p">Charge 4</th>
+                                                            <th class="wd-lg-8p">Interest</th>
+                                                            <th class="wd-lg-8p">CGST</th>
+                                                            <th class="wd-lg-8p">SGST</th>
+                                                            <th class="wd-lg-8p">Total</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Karandeep Saluja</td>
+                                                            <td>A-002</td>
+                                                            <td>124 Sq.Ft</td>
+                                                            <td>100.00</td>
+                                                            <td>200.00</td>
+                                                            <td>300.00</td>
+                                                            <td>400.00</td>
+                                                            <td>0.0</td>
+                                                            <td>0.0</td>
+                                                            <td>0.0</td>
+                                                            <td>1000.00</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Karandeep Saluja</td>
+                                                            <td>A-002</td>
+                                                            <td>124 Sq.Ft</td>
+                                                            <td>100.00</td>
+                                                            <td>200.00</td>
+                                                            <td>300.00</td>
+                                                            <td>400.00</td>
+                                                            <td>0.0</td>
+                                                            <td>0.0</td>
+                                                            <td>0.0</td>
+                                                            <td>1000.00</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Karandeep Saluja</td>
+                                                            <td>A-002</td>
+                                                            <td>124 Sq.Ft</td>
+                                                            <td>100.00</td>
+                                                            <td>200.00</td>
+                                                            <td>300.00</td>
+                                                            <td>400.00</td>
+                                                            <td>0.0</td>
+                                                            <td>0.0</td>
+                                                            <td>0.0</td>
+                                                            <td>1000.00</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>Karandeep Saluja</td>
+                                                            <td>A-002</td>
+                                                            <td>124 Sq.Ft</td>
+                                                            <td>100.00</td>
+                                                            <td>200.00</td>
+                                                            <td>300.00</td>
+                                                            <td>400.00</td>
+                                                            <td>0.0</td>
+                                                            <td>0.0</td>
+                                                            <td>0.0</td>
+                                                            <td>1000.00</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>Karandeep Saluja</td>
+                                                            <td>A-002</td>
+                                                            <td>124 Sq.Ft</td>
+                                                            <td>100.00</td>
+                                                            <td>200.00</td>
+                                                            <td>300.00</td>
+                                                            <td>400.00</td>
+                                                            <td>0.0</td>
+                                                            <td>0.0</td>
+                                                            <td>0.0</td>
+                                                            <td>1000.00</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>Karandeep Saluja</td>
+                                                            <td>A-002</td>
+                                                            <td>124 Sq.Ft</td>
+                                                            <td>100.00</td>
+                                                            <td>200.00</td>
+                                                            <td>300.00</td>
+                                                            <td>400.00</td>
+                                                            <td>0.0</td>
+                                                            <td>0.0</td>
+                                                            <td>0.0</td>
+                                                            <td>1000.00</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>Karandeep Saluja</td>
+                                                            <td>A-002</td>
+                                                            <td>124 Sq.Ft</td>
+                                                            <td>100.00</td>
+                                                            <td>200.00</td>
+                                                            <td>300.00</td>
+                                                            <td>400.00</td>
+                                                            <td>0.0</td>
+                                                            <td>0.0</td>
+                                                            <td>0.0</td>
+                                                            <td>1000.00</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>Karandeep Saluja</td>
+                                                            <td>A-002</td>
+                                                            <td>124 Sq.Ft</td>
+                                                            <td>100.00</td>
+                                                            <td>200.00</td>
+                                                            <td>300.00</td>
+                                                            <td>400.00</td>
+                                                            <td>0.0</td>
+                                                            <td>0.0</td>
+                                                            <td>0.0</td>
+                                                            <td>1000.00</td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>Karandeep Saluja</td>
+                                                            <td>A-002</td>
+                                                            <td>124 Sq.Ft</td>
+                                                            <td>100.00</td>
+                                                            <td>200.00</td>
+                                                            <td>300.00</td>
+                                                            <td>400.00</td>
+                                                            <td>0.0</td>
+                                                            <td>0.0</td>
+                                                            <td>0.0</td>
+                                                            <td>1000.00</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="row" *ngIf="showFooterFields">
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="Bank Name  / Branch"/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="Account No."/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="IFSC Code"/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="AC Type"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row" *ngIf="showFooterFields">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <ckeditor [config]="{ placeholder: 'Enter Footer Note Here..' }" [editor]="Editor" data="" skin="moono-lisa" language="en" (ready)="onReady($event)"></ckeditor>	
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    <button class="btn btn-info-gradient btn-rounded btn-block">(Stage 1) <br> Calculate Interest</button>
+                                                </div>
+
+                                                <div class="col-md-2">
+                                                    <button class="btn btn-success-gradient btn-rounded btn-block" disabled>(Stage 2) <br> Calculate GST</button>
+                                                </div>
+
+                                                <div class="col-md-2">
+                                                    <button class="btn btn-primary-gradient btn-rounded btn-block">(Stage 3) <br> Save Posting</button>
+                                                </div>
+
+
+                                                <div class="col-md-2" style="float: right;margin-left: 367px;">
+                                                    <button (click)="onOpenClick()" class="btn btn-primary-gradient btn-rounded btn-block">Open Bill <br> Footer</button>
+                                                </div>
+                                                
+                                            </div>
+                                        </ng-template>
+                                    </li>
+                                    <li [ngbNavItem]="2">
+                                        <a ngbNavLink>Category Name 2</a>
+                                        <ng-template ngbNavContent>
+                                            <!-- <button style="float: right" type="button" (click)="Select2Open(billingFootNote)" placement="bottom" class="btn btn-info btn-icon mr-2"  ngbTooltip="Create new Pool" >
+                                                <i class="fa fa-user-plus"></i>
+                                            </button> -->
+                                            <div class="table-responsive">
+                                                <table class="table table-bordered table-hover" id="">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="wd-lg-8p">Flat number</th>
+                                                            <th class="wd-lg-8p">Member Name</th>
+                                                            <th class="wd-lg-8p">Area</th>
+                                                            <th class="wd-lg-8p">Charge 1</th>
+                                                            <th class="wd-lg-8p">Charge 2</th>
+                                                            <th class="wd-lg-8p">Charge 3</th>
+                                                            <th class="wd-lg-8p">Charge 4</th>
+                                                            <th class="wd-lg-8p">Interest</th>
+                                                            <th class="wd-lg-8p">CGST</th>
+                                                            <th class="wd-lg-8p">SGST</th>
+                                                            <th class="wd-lg-8p">Total</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Karandeep Saluja</td>
+                                                            <td>A-002</td>
+                                                            <td>124 Sq.Ft</td>
+                                                            <td>100.00</td>
+                                                            <td>200.00</td>
+                                                            <td>300.00</td>
+                                                            <td>400.00</td>
+                                                            <td>0.0</td>
+                                                            <td>0.0</td>
+                                                            <td>0.0</td>
+                                                            <td>1000.00</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="Bank Name  / Branch"/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="Account No."/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="IFSC Code"/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="AC Type"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <ckeditor [config]="{ placeholder: 'Enter Footer Note Here..' }" [editor]="Editor" data="" skin="moono-lisa" language="en" (ready)="onReady($event)"></ckeditor>	
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <button class="btn btn-info-gradient btn-rounded btn-block">(Stage 1) <br> Calculate Interest</button>
+                                                </div>
+
+                                                <div class="col-md-2">
+                                                    <button class="btn btn-success-gradient btn-rounded btn-block" disabled>(Stage 2) <br> Calculate GST</button>
+                                                </div>
+
+                                                <div class="col-md-2">
+                                                    <button class="btn btn-primary-gradient btn-rounded btn-block">(Stage 3) <br> Save Posting</button>
+                                                </div>
+                                                
+                                            </div>
+                                        </ng-template>
+                                    </li>
+                                    <li [ngbNavItem]="3">
+                                        <a ngbNavLink>Category Name 3</a>
+                                        <ng-template ngbNavContent>
+                                            <!-- <button style="float: right" type="button" (click)="Select2Open(billingFootNote)" placement="bottom" class="btn btn-info btn-icon mr-2"  ngbTooltip="Create new Pool" >
+                                                <i class="fa fa-user-plus"></i>
+                                            </button> -->
+                                            <div class="table-responsive">
+                                                <table class="table table-bordered table-hover" id="">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="wd-lg-8p">Flat number</th>
+                                                            <th class="wd-lg-8p">Member Name</th>
+                                                            <th class="wd-lg-8p">Area</th>
+                                                            <th class="wd-lg-8p">Charge 1</th>
+                                                            <th class="wd-lg-8p">Charge 2</th>
+                                                            <th class="wd-lg-8p">Charge 3</th>
+                                                            <th class="wd-lg-8p">Charge 4</th>
+                                                            <th class="wd-lg-8p">Interest</th>
+                                                            <th class="wd-lg-8p">CGST</th>
+                                                            <th class="wd-lg-8p">SGST</th>
+                                                            <th class="wd-lg-8p">Total</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Karandeep Saluja</td>
+                                                            <td>A-002</td>
+                                                            <td>124 Sq.Ft</td>
+                                                            <td>100.00</td>
+                                                            <td>200.00</td>
+                                                            <td>300.00</td>
+                                                            <td>400.00</td>
+                                                            <td>0.0</td>
+                                                            <td>0.0</td>
+                                                            <td>0.0</td>
+                                                            <td>1000.00</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="Bank Name  / Branch"/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="Account No."/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="IFSC Code"/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="AC Type"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <ckeditor [config]="{ placeholder: 'Enter Footer Note Here..' }" [editor]="Editor" data="" skin="moono-lisa" language="en" (ready)="onReady($event)"></ckeditor>	
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <button class="btn btn-info-gradient btn-rounded btn-block">(Stage 1) <br> Calculate Interest</button>
+                                                </div>
+
+                                                <div class="col-md-2">
+                                                    <button class="btn btn-success-gradient btn-rounded btn-block" disabled>(Stage 2) <br> Calculate GST</button>
+                                                </div>
+
+                                                <div class="col-md-2">
+                                                    <button class="btn btn-primary-gradient btn-rounded btn-block">(Stage 3) <br> Save Posting</button>
+                                                </div>
+                                                
+                                            </div>
+                                        </ng-template>
+                                    </li>
+                                    <li [ngbNavItem]="4">
+                                        <a ngbNavLink>Category Name 4</a>
+                                        <ng-template ngbNavContent>
+                                            <!-- <button style="float: right" type="button" (click)="Select2Open(billingFootNote)" placement="bottom" class="btn btn-info btn-icon mr-2"  ngbTooltip="Create new Pool" >
+                                                <i class="fa fa-user-plus"></i>
+                                            </button> -->
+                                            <div class="table-responsive">
+                                                <table class="table table-bordered table-hover" id="">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="wd-lg-8p">Flat number</th>
+                                                            <th class="wd-lg-8p">Member Name</th>
+                                                            <th class="wd-lg-8p">Area</th>
+                                                            <th class="wd-lg-8p">Charge 1</th>
+                                                            <th class="wd-lg-8p">Charge 2</th>
+                                                            <th class="wd-lg-8p">Charge 3</th>
+                                                            <th class="wd-lg-8p">Charge 4</th>
+                                                            <th class="wd-lg-8p">Interest</th>
+                                                            <th class="wd-lg-8p">CGST</th>
+                                                            <th class="wd-lg-8p">SGST</th>
+                                                            <th class="wd-lg-8p">Total</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Karandeep Saluja</td>
+                                                            <td>A-002</td>
+                                                            <td>124 Sq.Ft</td>
+                                                            <td>100.00</td>
+                                                            <td>200.00</td>
+                                                            <td>300.00</td>
+                                                            <td>400.00</td>
+                                                            <td>0.0</td>
+                                                            <td>0.0</td>
+                                                            <td>0.0</td>
+                                                            <td>1000.00</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="Bank Name  / Branch"/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="Account No."/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="IFSC Code"/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="form-group">
+                                                        <input type="text" class="form-control" placeholder="AC Type"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <ckeditor [config]="{ placeholder: 'Enter Footer Note Here..' }" [editor]="Editor" data="" skin="moono-lisa" language="en" (ready)="onReady($event)"></ckeditor>	
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2">
+                                                    <button class="btn btn-info-gradient btn-rounded btn-block">(Stage 1) <br> Calculate Interest</button>
+                                                </div>
+
+                                                <div class="col-md-2">
+                                                    <button class="btn btn-success-gradient btn-rounded btn-block" disabled>(Stage 2) <br> Calculate GST</button>
+                                                </div>
+
+                                                <div class="col-md-2">
+                                                    <button class="btn btn-primary-gradient btn-rounded btn-block">(Stage 3) <br> Save Posting</button>
+                                                </div>
+                                                
+                                            </div>
+                                        </ng-template>
+                                    </li>
+                                </ul>
+                                <div class="panel-body tabs-menu-body main-content-body-right border">
+                                    <div [ngbNavOutlet]="nav1" class="tab-pane"></div>
+                                    <div class="tab-content">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-- row closed -->
